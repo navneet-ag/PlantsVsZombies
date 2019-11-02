@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="469.0" fitWidth="639.0" layoutX="-6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" rotate="-141.1">
+         <image>
+            <Image url="@Images/Leaderboard/Background.png" />
+         </image>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </ImageView>
+      <AnchorPane layoutX="138.0" layoutY="21.0" prefHeight="62.0" prefWidth="374.0">
+         <children>
+            <ImageView fitHeight="62.0" fitWidth="427.0" layoutX="-41.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/SelectPlants/SelectPlantHead.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="6.0" layoutY="14.0" prefHeight="54.0" prefWidth="102.0">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Leaderboard/Back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="363.0" fitWidth="557.0" layoutX="35.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SelectPlants/SelectPlantBox.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="101.0" layoutY="142.0">
+         <children>
+            <AnchorPane layoutX="2.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Peashooter1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="14.0" layoutY="80.0" text="Repaeter" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="91.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Sunflower1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="14.0" layoutY="80.0" text="Sunflower" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="180.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Wall-nut1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="18.0" layoutY="80.0" text="Walnut" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="270.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Potato_Mine1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="11.0" layoutY="80.0" text="Potatomine" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="360.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Repeater1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="17.0" layoutY="80.0" text="Repeater" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="102.0">
+               <children>
+                  <AnchorPane layoutX="2.0" prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Twin_Sunflower1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutY="78.0" text="Twin Sunflower" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="91.0" layoutY="102.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Tall-nut1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="21.0" layoutY="78.0" text="Tallnut" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="360.0" layoutY="102.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Chomper1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="17.0" layoutY="78.0" text="Chomper" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="270.0" layoutY="102.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Snow_Pea1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="14.0" layoutY="78.0" text="Snow Pea" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="180.0" layoutY="102.0">
+               <children>
+                  <AnchorPane prefHeight="82.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/Cherry_Bomb1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="7.0" layoutY="78.0" text="Cherrybomb" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="298.0" layoutY="395.0" prefHeight="54.0" prefWidth="90.0">
+         <children>
+            <ImageView fitHeight="62.0" fitWidth="115.0" layoutX="-13.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/SelectPlants/OK.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
