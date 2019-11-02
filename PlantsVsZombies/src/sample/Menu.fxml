@@ -43,7 +43,7 @@
                 </AnchorPane>
                 <AnchorPane layoutX="20.0" layoutY="145.0" prefHeight="40.0" prefWidth="182.0">
                     <children>
-                        <ImageView fitHeight="46.0" fitWidth="162.0" layoutX="15.0" layoutY="-2.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#LeadBoarderpressed" onMouseReleased="#LeadBoarderreleased" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="46.0" fitWidth="162.0" layoutX="15.0" layoutY="-2.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#LeaderBoardpressed" onMouseReleased="#LeaderBoardreleased" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@Images/Menu/Leaderboard.png" />
                             </image>

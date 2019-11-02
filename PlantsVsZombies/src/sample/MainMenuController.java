@@ -1,14 +1,19 @@
 package sample;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.effect.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainMenuController {
-
-    public ImageView SoundImageView;
     Image SoundButtonOn=new Image("sample/SoundOn.png");
     Image SoundButtonOff=new Image("sample/SoundOff.png");
     private static Boolean SoundOn=true;
@@ -80,20 +85,30 @@ public class MainMenuController {
         System.out.println("PlayReleased");
 
     }
-    public void LeadBoarderpressed( MouseEvent mouseEvent)
+    public void LeaderBoardpressed( MouseEvent mouseEvent)
     {
-        ImageView LeadBoarderButton=(ImageView)mouseEvent.getSource();
+        ImageView LeaderBoardButton=(ImageView)mouseEvent.getSource();
         Shadow shadow=new Shadow();
         shadow.setBlurType(BlurType.THREE_PASS_BOX);
         shadow.setColor(Color.rgb(14, 176, 52));
-        LeadBoarderButton.setEffect(shadow);
+        LeaderBoardButton.setEffect(shadow);
         System.out.println("PlayPressed");
     }
 
-    public void LeadBoarderreleased(MouseEvent mouseEvent)
-    {
-        ImageView LeadBoarderButton=(ImageView)mouseEvent.getSource();
-        LeadBoarderButton.setEffect(null);
+    public void LeaderBoardreleased(MouseEvent mouseEvent) throws IOException {
+        //Handle IOException
+        //If Exception set an image game closed abruptly
+
+        ImageView LeaderBoardButton=(ImageView)mouseEvent.getSource();
+        LeaderBoardButton.setEffect(null);
+        Parent tableparent = FXMLLoader.load(getClass().getResource("LeaderBoard.fxml"));
+        Scene tablescene =new Scene(tableparent);
+
+        Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+//        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(tablescene);
+        window.show();
+
         System.out.println("PlayReleased");
 
     }
@@ -112,6 +127,7 @@ public class MainMenuController {
         ImageView QuitButton=(ImageView)mouseEvent.getSource();
         QuitButton.setEffect(null);
         System.out.println("PlayReleased");
+        System.exit(0);
 
     }
     public void Soundpressed( MouseEvent mouseEvent)

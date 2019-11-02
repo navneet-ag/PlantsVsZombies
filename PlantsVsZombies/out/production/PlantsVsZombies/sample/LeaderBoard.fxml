@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LeaderBoardController">
+    <children>
+        <ImageView fitHeight="469.0" fitWidth="639.0" layoutX="-6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Images/Leaderboard/Background.png" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="172.0" layoutY="23.0" prefHeight="34.0" prefWidth="278.0">
+            <children>
+                <ImageView fitHeight="89.0" fitWidth="301.0" layoutX="-7.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/Leaderboard/Heading.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="155.0" layoutY="83.0" prefHeight="367.0" prefWidth="335.0">
+            <children>
+                <ImageView fitHeight="367.0" fitWidth="335.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/Leaderboard/Boards.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane layoutX="14.0" layoutY="35.0">
+                    <children>
+                        <AnchorPane>
+                            <children>
+                                <AnchorPane prefHeight="62.0" prefWidth="210.0" />
+                                <AnchorPane layoutX="10.0" layoutY="75.0" prefHeight="62.0" prefWidth="190.0" />
+                                <AnchorPane layoutX="20.0" layoutY="157.0" prefHeight="62.0" prefWidth="190.0" />
+                                <AnchorPane layoutX="20.0" layoutY="229.0" prefHeight="62.0" prefWidth="181.0" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="206.0" layoutY="4.0">
+                            <children>
+                                <AnchorPane layoutX="2.0" prefHeight="54.0" prefWidth="88.0" />
+                                <AnchorPane layoutY="66.0" prefHeight="54.0" prefWidth="88.0" />
+                                <AnchorPane layoutX="12.0" layoutY="157.0" prefHeight="54.0" prefWidth="82.0" />
+                                <AnchorPane layoutY="225.0" prefHeight="54.0" prefWidth="82.0" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="6.0" layoutY="14.0" prefHeight="54.0" prefWidth="102.0">
+            <children>
+                <ImageView fitHeight="45.0" fitWidth="102.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#Backpressed" onMouseReleased="#Backreleased" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/Leaderboard/Back.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
