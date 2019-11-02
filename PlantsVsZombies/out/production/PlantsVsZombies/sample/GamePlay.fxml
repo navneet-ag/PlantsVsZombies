@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GamePlayController">
     <children>
         <ImageView fitHeight="465.0" fitWidth="631.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -131,7 +132,7 @@
                 </AnchorPane>
                 <AnchorPane layoutX="506.0" prefHeight="50.0" prefWidth="82.0">
                     <children>
-                        <ImageView fitHeight="62.0" fitWidth="104.0" layoutX="-14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="62.0" fitWidth="104.0" layoutX="-14.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@Images/Gameplay/MenuButton.png" />
                             </image>

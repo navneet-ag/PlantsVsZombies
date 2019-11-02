@@ -14,23 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SelectPlantsController {
-    public void MouseEntered( MouseEvent mouseEvent)
-    {
-        ImageView OptionSelected=(ImageView)mouseEvent.getSource();
-        Bloom bloom = new Bloom();
-        bloom.setThreshold(0.40);
-        OptionSelected.setEffect(bloom);
-        System.out.println("MouseEntered");
-    }
-
-    public void MouseExited(MouseEvent mouseEvent)
-    {
-        ImageView OptionSelected=(ImageView)mouseEvent.getSource();
-        OptionSelected.setEffect(null);
-        System.out.println("MouseExited");
-
-    }
+public class SelectPlantsController extends Controller{
     public void Backpressed( MouseEvent mouseEvent)
     {
         ImageView BackButton=(ImageView)mouseEvent.getSource();
@@ -81,6 +65,32 @@ public class SelectPlantsController {
         System.out.println("PlayReleased");
 
     }
+    public void PlantPressed( MouseEvent mouseEvent)
+    {
+        ImageView PlantButton=(ImageView)mouseEvent.getSource();
+        Shadow shadow=new Shadow();
+        shadow.setBlurType(BlurType.THREE_PASS_BOX);
+        shadow.setColor(Color.rgb(14, 176, 52));
+        PlantButton.setEffect(shadow);
+        System.out.println("PlayPressed");
+    }
+
+    public void PlantReleased(MouseEvent mouseEvent) throws IOException {
+        //Handle IOException
+        //If Exception set an image game closed abruptly
+
+        ImageView PlantButton=(ImageView)mouseEvent.getSource();
+        PlantButton.setEffect(null);
+        Parent tableparent = FXMLLoader.load(getClass().getResource("GamePlay.fxml"));
+        Scene tablescene =new Scene(tableparent);
+        Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+//        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(tablescene);
+        window.show();
+        System.out.println("PlayReleased");
+
+    }
+
 
 
 }
