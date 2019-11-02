@@ -1,6 +1,5 @@
 module PlantsVsZombies {
     requires javafx.fxml;
-    requires  javafx.controls;
+    requires javafx.controls;
     opens sample;
-
 }

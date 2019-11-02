@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="457b8b90-ed3d-469f-90f5-05ebbf94cf3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../PlantsVsZombies.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlantsVsZombies/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlantsVsZombies/.idea/artifacts/JavaFXApp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlantsVsZombies/PlantsVsZombies.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlantsVsZombies/src/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlantsVsZombies/src/sample/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlantsVsZombies/src/sample/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PlantsVsZombies/src/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PlantsVsZombies.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PlantsVsZombies/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PlantsVsZombies/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PlantsVsZombies/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/PlantsVsZombies/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sample/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sample/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/sample/sample.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled/sample/mainmenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/sample/mainmenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +39,7 @@
   <component name="ProjectId" id="1T3g28WAiAwEYoEyDPLcBn9eF2B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
