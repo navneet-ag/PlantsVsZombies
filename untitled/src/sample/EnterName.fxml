@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -33,6 +34,7 @@
                         <Image url="@Images/EnterName/2x/NameBoard1.png" />
                      </image>
                   </ImageView>
+                  <TextField blendMode="COLOR_BURN" layoutX="66.0" layoutY="73.0" prefHeight="45.0" prefWidth="209.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="89.0" layoutY="183.0" prefHeight="54.0" prefWidth="134.0" />

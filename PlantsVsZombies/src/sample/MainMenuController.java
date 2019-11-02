@@ -44,10 +44,16 @@ public class MainMenuController {
         System.out.println("PlayPressed");
     }
 
-    public void Playreleased(MouseEvent mouseEvent)
-    {
+    public void Playreleased(MouseEvent mouseEvent) throws IOException {
         ImageView PlayButton=(ImageView)mouseEvent.getSource();
         PlayButton.setEffect(null);
+        Parent tableparent = FXMLLoader.load(getClass().getResource("EnterName.fxml"));
+        Scene tablescene =new Scene(tableparent);
+
+        Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(tablescene);
+        window.show();
+
         System.out.println("PlayReleased");
 
     }
@@ -105,7 +111,6 @@ public class MainMenuController {
         Scene tablescene =new Scene(tableparent);
 
         Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
-//        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(tablescene);
         window.show();
 
