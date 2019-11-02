@@ -13,27 +13,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainMenuController {
+public class MainMenuController extends Controller{
     Image SoundButtonOn=new Image("sample/SoundOn.png");
     Image SoundButtonOff=new Image("sample/SoundOff.png");
     private static Boolean SoundOn=true;
     private static Boolean SoundOff=false;
-    public void MouseEntered( MouseEvent mouseEvent)
-    {
-        ImageView OptionSelected=(ImageView)mouseEvent.getSource();
-        Bloom bloom = new Bloom();
-        bloom.setThreshold(0.40);
-        OptionSelected.setEffect(bloom);
-        System.out.println("MouseEntered");
-    }
-
-    public void MouseExited(MouseEvent mouseEvent)
-    {
-        ImageView OptionSelected=(ImageView)mouseEvent.getSource();
-        OptionSelected.setEffect(null);
-        System.out.println("MouseExited");
-
-    }
     public void Playpressed( MouseEvent mouseEvent)
     {
         ImageView PlayButton=(ImageView)mouseEvent.getSource();

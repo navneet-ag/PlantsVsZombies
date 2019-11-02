@@ -18,7 +18,7 @@ public class Main extends Application {
         MediaPlayer mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
         Parent root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("PlantsVsZombies");
         primaryStage.setScene(new Scene(root, 623, 456));
         primaryStage.show();
     }
