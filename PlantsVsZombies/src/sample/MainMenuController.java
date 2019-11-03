@@ -51,10 +51,15 @@ public class MainMenuController extends Controller{
         System.out.println("PlayPressed");
     }
 
-    public void Resumereleased(MouseEvent mouseEvent)
-    {
+    public void Resumereleased(MouseEvent mouseEvent) throws IOException {
         ImageView ResumeButton=(ImageView)mouseEvent.getSource();
         ResumeButton.setEffect(null);
+        Parent tableparent = FXMLLoader.load(getClass().getResource("EnterNameResumeGame.fxml"));
+        Scene tablescene =new Scene(tableparent);
+        Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(tablescene);
+        window.show();
+
         System.out.println("PlayReleased");
 
     }
@@ -68,10 +73,16 @@ public class MainMenuController extends Controller{
         System.out.println("PlayPressed");
     }
 
-    public void ChooseLevelreleased(MouseEvent mouseEvent)
-    {
-        ImageView ChooseLevelButton=(ImageView)mouseEvent.getSource();
-        ChooseLevelButton.setEffect(null);
+    public void ChooseLevelreleased(MouseEvent mouseEvent) throws IOException {
+        ImageView LeaderBoardButton=(ImageView)mouseEvent.getSource();
+        LeaderBoardButton.setEffect(null);
+        Parent tableparent = FXMLLoader.load(getClass().getResource("ChooseLevel.fxml"));
+        Scene tablescene =new Scene(tableparent);
+
+        Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
+        window.setScene(tablescene);
+        window.show();
+
         System.out.println("PlayReleased");
 
     }
