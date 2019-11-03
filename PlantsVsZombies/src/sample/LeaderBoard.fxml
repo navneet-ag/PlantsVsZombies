@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LeaderBoardController">
     <children>
@@ -31,18 +33,74 @@
                     <children>
                         <AnchorPane>
                             <children>
-                                <AnchorPane prefHeight="62.0" prefWidth="210.0" />
-                                <AnchorPane layoutX="10.0" layoutY="75.0" prefHeight="62.0" prefWidth="190.0" />
-                                <AnchorPane layoutX="20.0" layoutY="157.0" prefHeight="62.0" prefWidth="190.0" />
-                                <AnchorPane layoutX="20.0" layoutY="229.0" prefHeight="62.0" prefWidth="181.0" />
+                                <AnchorPane prefHeight="62.0" prefWidth="210.0">
+                           <children>
+                              <Label layoutX="27.0" layoutY="10.0" prefHeight="41.0" prefWidth="130.0" text="TEENVAN" textFill="WHITE">
+                                 <font>
+                                    <Font name="CooperBlackStd-Italic" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                                <AnchorPane layoutX="10.0" layoutY="75.0" prefHeight="62.0" prefWidth="190.0">
+                           <children>
+                              <Label layoutX="45.0" layoutY="10.0" prefHeight="41.0" prefWidth="130.0" text="LEEJAS" textFill="WHITE">
+                                 <font>
+                                    <Font name="CooperBlackStd-Italic" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                                <AnchorPane layoutX="20.0" layoutY="157.0" prefHeight="62.0" prefWidth="190.0">
+                           <children>
+                              <Label layoutX="23.0" layoutY="10.0" prefHeight="41.0" prefWidth="130.0" text="RAKSNAS" textFill="WHITE">
+                                 <font>
+                                    <Font name="CooperBlackStd-Italic" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                                <AnchorPane layoutX="20.0" layoutY="229.0" prefHeight="62.0" prefWidth="181.0">
+                           <children>
+                              <Label layoutX="47.0" layoutY="10.0" prefHeight="42.0" prefWidth="102.0" text="DT144" textFill="WHITE">
+                                 <font>
+                                    <Font name="CooperBlackStd-Italic" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
                             </children>
                         </AnchorPane>
                         <AnchorPane layoutX="206.0" layoutY="4.0">
                             <children>
-                                <AnchorPane layoutX="2.0" prefHeight="54.0" prefWidth="88.0" />
-                                <AnchorPane layoutY="66.0" prefHeight="54.0" prefWidth="88.0" />
-                                <AnchorPane layoutX="12.0" layoutY="157.0" prefHeight="54.0" prefWidth="82.0" />
-                                <AnchorPane layoutY="225.0" prefHeight="54.0" prefWidth="82.0" />
+                                <AnchorPane layoutX="2.0" prefHeight="54.0" prefWidth="88.0">
+                           <children>
+                              <Label layoutX="18.0" prefHeight="41.0" prefWidth="52.0" text="5" textFill="WHITE">
+                                 <font>
+                                    <Font name="Candara Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                                <AnchorPane layoutY="66.0" prefHeight="54.0" prefWidth="88.0">
+                           <children>
+                              <Label layoutX="22.0" prefHeight="41.0" prefWidth="52.0" text="5" textFill="WHITE">
+                                 <font>
+                                    <Font name="Candara Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                                <AnchorPane layoutX="12.0" layoutY="157.0" prefHeight="54.0" prefWidth="82.0">
+                           <children>
+                              <Label layoutX="7.0" layoutY="3.0" prefHeight="41.0" prefWidth="52.0" text="4" textFill="WHITE">
+                                 <font>
+                                    <Font name="Candara Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                                <AnchorPane layoutY="225.0" prefHeight="54.0" prefWidth="82.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="3.0" prefHeight="41.0" prefWidth="52.0" text="4" textFill="WHITE">
+                                 <font>
+                                    <Font name="Candara Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
                             </children>
                         </AnchorPane>
                     </children>

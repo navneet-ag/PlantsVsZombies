@@ -45,21 +45,21 @@
                     <children>
                         <AnchorPane prefHeight="82.0" prefWidth="79.0">
                             <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PeaShooterpressed" onMouseReleased="#PeaShooterreleased" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@Images/Plants/Peashooter1.png" />
                                     </image>
                                 </ImageView>
                             </children>
                         </AnchorPane>
-                        <Label layoutX="14.0" layoutY="80.0" text="Repaeter" />
+                        <Label layoutX="8.0" layoutY="79.0" text="Pea Shooter" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="91.0">
                     <children>
                         <AnchorPane prefHeight="82.0" prefWidth="79.0">
                             <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#Sunflowerpressed" onMouseReleased="#Sunflowerreleased" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@Images/Plants/Sunflower1.png" />
                                     </image>
@@ -75,7 +75,7 @@
                             <children>
                                 <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@Images/Plants/Wall-nut1.png" />
+                                        <Image url="@Images/SelectPlants/Locked/Wall-nut1.png" />
                                     </image>
                                 </ImageView>
                             </children>
@@ -89,7 +89,7 @@
                             <children>
                                 <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@Images/Plants/Potato_Mine1.png" />
+                                        <Image url="@Images/SelectPlants/Locked/Potato_Mine1.png" />
                                     </image>
                                 </ImageView>
                             </children>
@@ -103,7 +103,7 @@
                             <children>
                                 <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@Images/Plants/Repeater1.png" />
+                                        <Image url="@Images/SelectPlants/Locked/Repeater1.png" />
                                     </image>
                                 </ImageView>
                             </children>
@@ -117,7 +117,7 @@
                             <children>
                                 <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@Images/Plants/Twin_Sunflower1.png" />
+                                        <Image url="@Images/SelectPlants/Locked/Twin_Sunflower1.png" />
                                     </image>
                                 </ImageView>
                             </children>
@@ -131,7 +131,7 @@
                             <children>
                                 <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@Images/Plants/Tall-nut1.png" />
+                                        <Image url="@Images/SelectPlants/Locked/Tall-nut1.png" />
                                     </image>
                                 </ImageView>
                             </children>
@@ -145,7 +145,7 @@
                             <children>
                                 <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@Images/Plants/Chomper1.png" />
+                                        <Image url="@Images/SelectPlants/Locked/Chomper1.png" />
                                     </image>
                                 </ImageView>
                             </children>
@@ -159,7 +159,7 @@
                             <children>
                                 <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@Images/Plants/Snow_Pea1.png" />
+                                        <Image url="@Images/SelectPlants/Locked/Snow_Pea1.png" />
                                     </image>
                                 </ImageView>
                             </children>
@@ -173,7 +173,7 @@
                             <children>
                                 <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@Images/Plants/Cherry_Bomb1.png" />
+                                        <Image url="@Images/SelectPlants/Locked/Cherry_Bomb1.png" />
                                     </image>
                                 </ImageView>
                             </children>

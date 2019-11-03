@@ -23,6 +23,77 @@ import java.io.File;
 import java.io.IOException;
 
 public class SelectPlantsController extends Controller{
+
+    Image PeaShooterButtonOn=new Image("sample/PeaShooterSelected.png");
+    Image PeaShooterButtonOff=new Image("sample/Peashooter1.png");
+    private static Boolean PeaShooterOn=true;
+    private static Boolean PeaShooterOff=false;
+    Image SunflowerButtonOn=new Image("sample/SunflowerSelected.png");
+    Image SunflowerButtonOff=new Image("sample/Sunflower1.png");
+    private static Boolean SunflowerOn=true;
+    private static Boolean SunflowerOff=false;
+
+    public void PeaShooterpressed( MouseEvent mouseEvent)
+    {
+        ImageView PeaShooterButton=(ImageView)mouseEvent.getSource();
+        Shadow shadow=new Shadow();
+        shadow.setBlurType(BlurType.THREE_PASS_BOX);
+        shadow.setColor(Color.rgb(14, 176, 52));
+        PeaShooterButton.setEffect(shadow);
+        System.out.println("PlayPressed");
+    }
+
+    public void Sunflowerpressed( MouseEvent mouseEvent)
+    {
+        ImageView SunflowerButton=(ImageView)mouseEvent.getSource();
+        Shadow shadow=new Shadow();
+        shadow.setBlurType(BlurType.THREE_PASS_BOX);
+        shadow.setColor(Color.rgb(14, 176, 52));
+        SunflowerButton.setEffect(shadow);
+        System.out.println("PlayPressed");
+    }
+
+
+    public void Sunflowerreleased(MouseEvent mouseEvent)
+    {
+        ImageView SunflowerButton=(ImageView)mouseEvent.getSource();
+        SunflowerButton.setEffect(null);
+        if(!SunflowerOn)
+        {
+            SunflowerButton.setImage(SunflowerButtonOff);
+            SunflowerOff=false;
+            SunflowerOn=true;
+        }
+        else
+        {
+            SunflowerButton.setImage(SunflowerButtonOn);
+            SunflowerOff=true;
+            SunflowerOn=false;
+        }
+
+        System.out.println("PlayReleased");
+    }
+
+    public void PeaShooterreleased(MouseEvent mouseEvent)
+    {
+        ImageView PeaShooterButton=(ImageView)mouseEvent.getSource();
+        PeaShooterButton.setEffect(null);
+        if(!PeaShooterOn)
+        {
+            PeaShooterButton.setImage(PeaShooterButtonOff);
+            PeaShooterOff=false;
+            PeaShooterOn=true;
+        }
+        else
+        {
+            PeaShooterButton.setImage(PeaShooterButtonOn);
+            PeaShooterOff=true;
+            PeaShooterOn=false;
+        }
+
+        System.out.println("PlayReleased");
+    }
+
     public void Backpressed( MouseEvent mouseEvent)
     {
         ImageView BackButton=(ImageView)mouseEvent.getSource();
@@ -93,7 +164,7 @@ public class SelectPlantsController extends Controller{
         Image PeaShooter = new Image("sample/pea_shooter.gif");
         SelectedPlant.setImage(PeaShooter);
         SelectedPlant.setFitHeight(50);
-        SelectedPlant.setFitWidth(35);
+        SelectedPlant.setFitWidth(40);
         SelectedPlant.setX(165);
         SelectedPlant.setY(245);
 
@@ -124,32 +195,6 @@ public class SelectPlantsController extends Controller{
         window.show();
         System.out.println("PlayReleased");
     }
-    public void PlantPressed( MouseEvent mouseEvent)
-    {
-        ImageView PlantButton=(ImageView)mouseEvent.getSource();
-        Shadow shadow=new Shadow();
-        shadow.setBlurType(BlurType.THREE_PASS_BOX);
-        shadow.setColor(Color.rgb(14, 176, 52));
-        PlantButton.setEffect(shadow);
-        System.out.println("PlayPressed");
-    }
-
-    public void PlantReleased(MouseEvent mouseEvent) throws IOException {
-        //Handle IOException
-        //If Exception set an image game closed abruptly
-
-        ImageView PlantButton=(ImageView)mouseEvent.getSource();
-        PlantButton.setEffect(null);
-        Parent tableparent = FXMLLoader.load(getClass().getResource("GamePlay.fxml"));
-        Scene tablescene =new Scene(tableparent);
-        Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
-//        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(tablescene);
-        window.show();
-        System.out.println("PlayReleased");
-
-    }
-
 
 
 }

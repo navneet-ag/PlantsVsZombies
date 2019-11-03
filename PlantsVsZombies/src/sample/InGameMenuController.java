@@ -122,7 +122,7 @@ public class InGameMenuController extends Controller {
         Image PeaShooter = new Image("sample/pea_shooter.gif");
         SelectedPlant.setImage(PeaShooter);
         SelectedPlant.setFitHeight(50);
-        SelectedPlant.setFitWidth(35);
+        SelectedPlant.setFitWidth(40);
         SelectedPlant.setX(165);
         SelectedPlant.setY(245);
 
