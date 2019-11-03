@@ -6,59 +6,88 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.effect.Bloom;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.Shadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.File;
 import java.io.IOException;
 
-public class SelectPlantsController extends Controller{
-    public void Backpressed( MouseEvent mouseEvent)
+public class InGameMenuController extends Controller {
+
+
+
+    Image SoundButtonOn=new Image("sample/SoundOn.png");
+    Image SoundButtonOff=new Image("sample/SoundOff.png");
+    private static Boolean SoundOn=true;
+    private static Boolean SoundOff=false;
+
+    public void Soundpressed( MouseEvent mouseEvent)
     {
-        ImageView BackButton=(ImageView)mouseEvent.getSource();
+        ImageView SoundButton=(ImageView)mouseEvent.getSource();
         Shadow shadow=new Shadow();
         shadow.setBlurType(BlurType.THREE_PASS_BOX);
         shadow.setColor(Color.rgb(14, 176, 52));
-        BackButton.setEffect(shadow);
+        SoundButton.setEffect(shadow);
         System.out.println("PlayPressed");
     }
 
-    public void Backreleased(MouseEvent mouseEvent) throws IOException {
-        //Handle IOException
-        //If Exception set an image game closed abruptly
+    public void Soundreleased(MouseEvent mouseEvent)
+    {
+        ImageView SoundButton=(ImageView)mouseEvent.getSource();
+        SoundButton.setEffect(null);
+        if(SoundOn)
+        {
+            SoundButton.setImage(SoundButtonOff);
+            SoundOff=true;
+            SoundOn=false;
+        }
+        else
+        {
+            SoundButton.setImage(SoundButtonOn);
+            SoundOff=false;
+            SoundOn=true;
+        }
 
-        ImageView BackButton=(ImageView)mouseEvent.getSource();
-        BackButton.setEffect(null);
-        Parent tableparent = FXMLLoader.load(getClass().getResource("EnterName.fxml"));
-        Scene tablescene =new Scene(tableparent);
-        Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
-//        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(tablescene);
-        window.show();
         System.out.println("PlayReleased");
-
     }
-    public void OkPressed( MouseEvent mouseEvent)
+
+
+    public void Exitpressed( MouseEvent mouseEvent)
     {
-        ImageView OkButton=(ImageView)mouseEvent.getSource();
+        ImageView QuitButton=(ImageView)mouseEvent.getSource();
         Shadow shadow=new Shadow();
         shadow.setBlurType(BlurType.THREE_PASS_BOX);
         shadow.setColor(Color.rgb(14, 176, 52));
-        OkButton.setEffect(shadow);
+        QuitButton.setEffect(shadow);
         System.out.println("PlayPressed");
     }
 
-    public void OkReleased(MouseEvent mouseEvent) throws IOException {
+    public void Exitreleased(MouseEvent mouseEvent)
+    {
+        ImageView QuitButton=(ImageView)mouseEvent.getSource();
+        QuitButton.setEffect(null);
+        System.out.println("PlayReleased");
+        System.exit(0);
+
+    }
+
+    public void ResumePressed( MouseEvent mouseEvent)
+    {
+        ImageView QuitButton=(ImageView)mouseEvent.getSource();
+        Shadow shadow=new Shadow();
+        shadow.setBlurType(BlurType.THREE_PASS_BOX);
+        shadow.setColor(Color.rgb(14, 176, 52));
+        QuitButton.setEffect(shadow);
+        System.out.println("PlayPressed");
+    }
+
+    public void ResumeReleased(MouseEvent mouseEvent) throws IOException {
         //Handle IOException
         //If Exception set an image game closed abruptly
         final ImageView SelectedZombie = new ImageView();
@@ -101,22 +130,7 @@ public class SelectPlantsController extends Controller{
         OkButton.setEffect(null);
         Parent tableparent = FXMLLoader.load(getClass().getResource("GamePlay.fxml"));
 
-        final ImageView Sun = new ImageView();
-        Image suntoken = new Image("sample/sun.gif");
-        Sun.setImage(suntoken);
-        Sun.setFitHeight(45);
-        Sun.setFitWidth(45);
-        Line linesun=new Line(100,100,100,400);
-
-        PathTransition transtionsun=new PathTransition();
-        transtionsun.setNode(Sun);
-        transtion.setDelay(Duration.seconds(20));
-        transtionsun.setDuration(Duration.seconds(10));
-        transtionsun.setPath(linesun);
-        transtionsun.setCycleCount(1);
-        transtionsun.play();
-
-        Group root2=new Group(tableparent,SelectedZombie,SelectedPlant,ShootPea,Sun);
+        Group root2=new Group(tableparent,SelectedZombie,SelectedPlant,ShootPea);
         Scene tablescene =new Scene(root2);
         Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
 //        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -124,31 +138,7 @@ public class SelectPlantsController extends Controller{
         window.show();
         System.out.println("PlayReleased");
     }
-    public void PlantPressed( MouseEvent mouseEvent)
-    {
-        ImageView PlantButton=(ImageView)mouseEvent.getSource();
-        Shadow shadow=new Shadow();
-        shadow.setBlurType(BlurType.THREE_PASS_BOX);
-        shadow.setColor(Color.rgb(14, 176, 52));
-        PlantButton.setEffect(shadow);
-        System.out.println("PlayPressed");
-    }
 
-    public void PlantReleased(MouseEvent mouseEvent) throws IOException {
-        //Handle IOException
-        //If Exception set an image game closed abruptly
-
-        ImageView PlantButton=(ImageView)mouseEvent.getSource();
-        PlantButton.setEffect(null);
-        Parent tableparent = FXMLLoader.load(getClass().getResource("GamePlay.fxml"));
-        Scene tablescene =new Scene(tableparent);
-        Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
-//        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(tablescene);
-        window.show();
-        System.out.println("PlayReleased");
-
-    }
 
 
 

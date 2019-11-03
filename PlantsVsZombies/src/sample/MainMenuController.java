@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainMenuController extends Controller{
+
     Image SoundButtonOn=new Image("sample/SoundOn.png");
     Image SoundButtonOff=new Image("sample/SoundOff.png");
     private static Boolean SoundOn=true;

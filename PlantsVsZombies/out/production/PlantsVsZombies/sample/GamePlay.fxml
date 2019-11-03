@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GamePlayController">
     <children>
         <ImageView fitHeight="465.0" fitWidth="631.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -104,11 +108,46 @@
                 </AnchorPane>
                 <AnchorPane layoutY="6.0">
                     <children>
-                        <AnchorPane prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="62.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="124.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="184.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="47.0" />
+                        <AnchorPane prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Gameplay/lawn_mover.gif" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+                        <AnchorPane layoutY="62.0" prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="9.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Gameplay/lawn_mover.gif" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+                        <AnchorPane layoutY="124.0" prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="12.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Gameplay/lawn_mover.gif" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+                        <AnchorPane layoutY="184.0" prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="8.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Gameplay/lawn_mover.gif" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+                        <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Gameplay/lawn_mover.gif" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
                     </children>
                 </AnchorPane>
             </children>
@@ -118,12 +157,33 @@
                 <AnchorPane layoutX="50.0" prefHeight="50.0" prefWidth="47.0" />
                 <AnchorPane layoutX="97.0" prefHeight="50.0" prefWidth="47.0" />
                 <AnchorPane layoutX="144.0" prefHeight="50.0" prefWidth="47.0" />
-                <AnchorPane layoutX="191.0" prefHeight="50.0" prefWidth="47.0" />
-                <AnchorPane layoutX="238.0" prefHeight="50.0" prefWidth="47.0" />
-                <AnchorPane prefHeight="50.0" prefWidth="47.0" />
+                <AnchorPane layoutX="191.0" prefHeight="50.0" prefWidth="47.0">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="1.0" layoutY="-6.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+                <AnchorPane layoutX="238.0" prefHeight="50.0" prefWidth="47.0">
+               <children>
+                  <ImageView fitHeight="62.0" fitWidth="61.0" layoutX="1.0" layoutY="-6.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Gameplay/PlantCards/SunflowerSeedPacket.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+                <AnchorPane prefHeight="51.0" prefWidth="47.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Gameplay/sun.gif" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
                 <AnchorPane layoutX="299.0" prefHeight="50.0" prefWidth="47.0">
                     <children>
-                        <ImageView fitHeight="55.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="55.0" fitWidth="47.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@Images/Plants/Plough.png" />
                             </image>
@@ -132,15 +192,25 @@
                 </AnchorPane>
                 <AnchorPane layoutX="506.0" prefHeight="50.0" prefWidth="82.0">
                     <children>
-                        <ImageView fitHeight="62.0" fitWidth="104.0" layoutX="-14.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="62.0" fitWidth="104.0" layoutX="-14.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#MenuPressed" onMouseReleased="#MenuReleased" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@Images/Gameplay/MenuButton.png" />
                             </image>
                         </ImageView>
                     </children>
                 </AnchorPane>
-                <AnchorPane layoutY="56.0" prefHeight="27.0" prefWidth="40.0" />
+                <AnchorPane layoutY="56.0" prefHeight="27.0" prefWidth="40.0">
+               <children>
+                  <TextField blendMode="ADD" layoutX="3.0" layoutY="1.0" prefHeight="26.0" prefWidth="38.0">
+                     <effect>
+                        <Shadow color="#901b1b" />
+                     </effect>
+                  </TextField>
+                  <Label alignment="CENTER" blendMode="DARKEN" layoutX="4.0" prefHeight="26.0" prefWidth="30.0" text="100" />
+               </children></AnchorPane>
+            <Label blendMode="MULTIPLY" layoutX="53.0" layoutY="24.0" prefHeight="40.0" prefWidth="75.0" text="Lucifer" textFill="#000000b8" />
             </children>
         </AnchorPane>
+      <ProgressBar blendMode="EXCLUSION" layoutX="409.0" layoutY="432.0" prefWidth="200.0" progress="0.55" />
     </children>
 </AnchorPane>
