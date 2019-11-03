@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.animation.PathTransition;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -126,11 +127,34 @@ public class InGameMenuController extends Controller {
         SelectedPlant.setX(165);
         SelectedPlant.setY(245);
 
+        final ImageView Sun = new ImageView();
+        Image suntoken = new Image("sample/sun.gif");
+        Sun.setImage(suntoken);
+        Sun.setFitHeight(45);
+        Sun.setFitWidth(45);
+        Line linesun=new Line(100,100,100,400);
+
+        PathTransition transtionsun=new PathTransition();
+        transtionsun.setNode(Sun);
+        transtion.setDelay(Duration.seconds(20));
+        transtionsun.setDuration(Duration.seconds(10));
+        transtionsun.setPath(linesun);
+        transtionsun.setCycleCount(1);
+        transtionsun.play();
+        Sun.setOnMouseClicked(new EventHandler<MouseEvent>(){
+
+            @Override
+            public void handle(MouseEvent event) {
+                Sun.setImage(null);
+            }
+        });
+
+
         ImageView OkButton=(ImageView)mouseEvent.getSource();
         OkButton.setEffect(null);
         Parent tableparent = FXMLLoader.load(getClass().getResource("GamePlay.fxml"));
 
-        Group root2=new Group(tableparent,SelectedZombie,SelectedPlant,ShootPea);
+        Group root2=new Group(tableparent,SelectedZombie,SelectedPlant,ShootPea,Sun);
         Scene tablescene =new Scene(root2);
         Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
 //        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();

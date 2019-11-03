@@ -26,6 +26,7 @@ public class Main extends Application {
         mediaPlayer.play();
         Parent root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         primaryStage.setScene(new Scene(root, 623, 456));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
