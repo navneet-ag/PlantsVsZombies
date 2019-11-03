@@ -51,7 +51,7 @@
                            </children></AnchorPane>
                                 <AnchorPane layoutX="20.0" layoutY="157.0" prefHeight="62.0" prefWidth="190.0">
                            <children>
-                              <Label layoutX="23.0" layoutY="10.0" prefHeight="41.0" prefWidth="130.0" text="RAKSNAS" textFill="WHITE">
+                              <Label layoutX="23.0" layoutY="10.0" prefHeight="41.0" prefWidth="130.0" text="DT144" textFill="WHITE">
                                  <font>
                                     <Font name="CooperBlackStd-Italic" size="25.0" />
                                  </font>
@@ -59,7 +59,7 @@
                            </children></AnchorPane>
                                 <AnchorPane layoutX="20.0" layoutY="229.0" prefHeight="62.0" prefWidth="181.0">
                            <children>
-                              <Label layoutX="47.0" layoutY="10.0" prefHeight="42.0" prefWidth="102.0" text="DT144" textFill="WHITE">
+                              <Label layoutX="19.0" layoutY="10.0" prefHeight="42.0" prefWidth="153.0" text="BHAVAMLM" textFill="WHITE">
                                  <font>
                                     <Font name="CooperBlackStd-Italic" size="25.0" />
                                  </font>
@@ -67,7 +67,7 @@
                            </children></AnchorPane>
                             </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="206.0" layoutY="4.0">
+                        <AnchorPane layoutX="206.0" layoutY="1.0">
                             <children>
                                 <AnchorPane layoutX="2.0" prefHeight="54.0" prefWidth="88.0">
                            <children>
@@ -95,7 +95,7 @@
                            </children></AnchorPane>
                                 <AnchorPane layoutY="225.0" prefHeight="54.0" prefWidth="82.0">
                            <children>
-                              <Label layoutX="15.0" layoutY="3.0" prefHeight="41.0" prefWidth="52.0" text="4" textFill="WHITE">
+                              <Label layoutX="15.0" layoutY="3.0" prefHeight="41.0" prefWidth="52.0" text="1" textFill="WHITE">
                                  <font>
                                     <Font name="Candara Bold" size="40.0" />
                                  </font>

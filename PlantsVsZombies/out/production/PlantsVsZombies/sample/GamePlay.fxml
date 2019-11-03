@@ -22,7 +22,14 @@
                         <AnchorPane layoutY="62.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="124.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="186.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="47.0" />
+                        <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Plants/sun_flower.gif" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="97.0" layoutY="6.0">
@@ -139,7 +146,8 @@
                               <Image url="@Images/Gameplay/lawn_mover.gif" />
                            </image>
                         </ImageView>
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
                         <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="47.0">
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
@@ -211,6 +219,6 @@
             <Label blendMode="MULTIPLY" layoutX="53.0" layoutY="24.0" prefHeight="40.0" prefWidth="75.0" text="Lucifer" textFill="#000000b8" />
             </children>
         </AnchorPane>
-      <ProgressBar blendMode="EXCLUSION" layoutX="409.0" layoutY="432.0" prefWidth="200.0" progress="0.55" />
+      <ProgressBar blendMode="EXCLUSION" layoutX="409.0" layoutY="432.0" prefWidth="200.0" progress="0.3" />
     </children>
 </AnchorPane>

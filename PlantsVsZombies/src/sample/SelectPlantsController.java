@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.animation.PathTransition;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -186,7 +187,13 @@ public class SelectPlantsController extends Controller{
         transtionsun.setPath(linesun);
         transtionsun.setCycleCount(1);
         transtionsun.play();
+        Sun.setOnMouseClicked(new EventHandler<MouseEvent>(){
 
+            @Override
+            public void handle(MouseEvent event) {
+                Sun.setImage(null);
+            }
+        });
         Group root2=new Group(tableparent,SelectedZombie,SelectedPlant,ShootPea,Sun);
         Scene tablescene =new Scene(root2);
         Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
