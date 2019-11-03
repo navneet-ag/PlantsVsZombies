@@ -36,11 +36,11 @@ public class ChooseLevelController extends Controller {
         OkButton.setEffect(null);
         Parent tableparent = FXMLLoader.load(getClass().getResource("GamePlay.fxml"));
         Scene tablescene =new Scene(tableparent);
+
         Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
 //        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(tablescene);
         window.show();
-        System.out.println("PlayReleased");
 
     }
 
