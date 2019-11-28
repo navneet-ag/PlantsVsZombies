@@ -1,4 +1,15 @@
 package sample;
 
-public class Repeater {
+public class Repeater extends Shooter {
+
+    public void Repeater()
+    {
+
+    }
+
+    protected void Shoot()
+    {
+
+
+    }
 }
