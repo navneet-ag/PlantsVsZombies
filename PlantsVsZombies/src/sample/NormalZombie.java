@@ -1,4 +1,9 @@
 package sample;
 
-public class NormalZombie {
+public class NormalZombie extends Zombie{
+
+    protected float Attack()
+    {
+        return 0;
+    }
 }
