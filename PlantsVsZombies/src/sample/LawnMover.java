@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.scene.image.ImageView;
+
 public class LawnMover {
 
 
@@ -7,7 +9,13 @@ public class LawnMover {
     private float y;
     private float Speed;
     private Boolean UseStatus;
-
+    private ImageView Lawn;
+    public LawnMover()
+    {
+        Lawn=new ImageView("sample/lawn_mover.gif");
+        Speed=5;
+        UseStatus=false;
+    }
     public float getX() {
         return x;
     }

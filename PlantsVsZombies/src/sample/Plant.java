@@ -1,6 +1,8 @@
 package sample;
 
 public class Plant extends Avatar {
+    protected float RegenerationTime;
+    protected float PlantCost;
 
     public float getRegenerationTime() {
         return RegenerationTime;
@@ -18,8 +20,6 @@ public class Plant extends Avatar {
         PlantCost = plantCost;
     }
 
-    protected float RegenerationTime;
-    protected float PlantCost;
 
     protected void Die()
     {

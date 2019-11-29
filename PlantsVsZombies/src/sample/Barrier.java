@@ -1,4 +1,4 @@
 package sample;
 
-public class Barrier {
+public class Barrier extends Plant {
 }

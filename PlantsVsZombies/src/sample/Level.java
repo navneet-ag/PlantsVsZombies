@@ -3,12 +3,13 @@ package sample;
 import java.util.ArrayList;
 
 public class Level {
-
+    private int LevelNumber;
     private String PlanttobeUnLocked;
     private int GridSize;
     private float SunValue;
     private ArrayList<LawnMover> LawnMoversList = new ArrayList<LawnMover>();
     private ArrayList<Zombie> ZombiesList = new ArrayList<Zombie>();
+
 
     public String getPlanttobeLocked() {
         return PlanttobeUnLocked;
