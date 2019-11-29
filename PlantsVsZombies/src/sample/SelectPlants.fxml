@@ -43,141 +43,61 @@
             <children>
                 <AnchorPane layoutX="2.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PeaShooterpressed" onMouseReleased="#PeaShooterreleased" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/Plants/Peashooter1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="8.0" layoutY="79.0" text="Pea Shooter" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="91.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#Sunflowerpressed" onMouseReleased="#Sunflowerreleased" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/Plants/Sunflower1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="14.0" layoutY="80.0" text="Sunflower" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="180.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/SelectPlants/Locked/Wall-nut1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="18.0" layoutY="80.0" text="Walnut" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="270.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/SelectPlants/Locked/Potato_Mine1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="11.0" layoutY="80.0" text="Potatomine" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="360.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/SelectPlants/Locked/Repeater1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="17.0" layoutY="80.0" text="Repeater" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutY="102.0">
                     <children>
-                        <AnchorPane layoutX="2.0" prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/SelectPlants/Locked/Twin_Sunflower1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane layoutX="2.0" prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutY="78.0" text="Twin Sunflower" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="91.0" layoutY="102.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/SelectPlants/Locked/Tall-nut1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="21.0" layoutY="78.0" text="Tallnut" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="360.0" layoutY="102.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/SelectPlants/Locked/Chomper1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="17.0" layoutY="78.0" text="Chomper" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="270.0" layoutY="102.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/SelectPlants/Locked/Snow_Pea1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="14.0" layoutY="78.0" text="Snow Pea" />
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="180.0" layoutY="102.0">
                     <children>
-                        <AnchorPane prefHeight="82.0" prefWidth="79.0">
-                            <children>
-                                <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="8.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@Images/SelectPlants/Locked/Cherry_Bomb1.png" />
-                                    </image>
-                                </ImageView>
-                            </children>
-                        </AnchorPane>
+                        <AnchorPane prefHeight="82.0" prefWidth="79.0" />
                         <Label layoutX="7.0" layoutY="78.0" text="Cherrybomb" />
                     </children>
                 </AnchorPane>

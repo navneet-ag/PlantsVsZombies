@@ -9,6 +9,18 @@ public class Player {
     private Long Score;
     private Game PlayerGame;
 
+    public Player(String Name)
+    {
+        this.Name=Name;
+        this.SlotsAvailable=2;
+        this.Score=0L;
+        this.PlayerGame=new Game();
+        this.UnlockedPlants.add("PeaShooter");
+        this.UnlockedPlants.add("SunFlower");
+        this.UnlockedPlants.add("WallNut");
+        this.UnlockedPlants.add("PotatoMine");
+
+    }
     public String getName() {
         return Name;
     }
@@ -41,11 +53,16 @@ public class Player {
         Score = score;
     }
 
-    public Game getPlayerGame() {
+    public Game  getPlayerGame() {
         return PlayerGame;
     }
 
     public void setPlayerGame(Game playerGame) {
         PlayerGame = playerGame;
     }
+    public void addPlant(String name)
+    {
+        UnlockedPlants.add(name);
+    }
+
 }

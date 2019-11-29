@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Game {
 
     private Level CurrentLevel;
-    private ArrayList<Plant> SelectedPlants = new ArrayList<Plant>();
+    private ArrayList<String> SelectedPlants = new ArrayList<String>();
     private ArrayList<Zombie> ZombiesInGrid = new ArrayList<Zombie>();
     private ArrayList<Sun> SunInGrid = new ArrayList<Sun>();
 
@@ -18,17 +18,18 @@ public class Game {
         CurrentLevel = currentLevel;
     }
 
-    public ArrayList<Plant> getSelectedPlants() {
-        return SelectedPlants;
+    public void setSelectedPlants(ArrayList<String> selectedPlants) {
+        SelectedPlants = selectedPlants;
     }
 
-    public void setSelectedPlants(ArrayList<Plant> selectedPlants) {
-        SelectedPlants = selectedPlants;
+    public ArrayList<String> getSelectedPlants() {
+        return SelectedPlants;
     }
 
     public ArrayList<Zombie> getZombiesInGrid() {
         return ZombiesInGrid;
     }
+
 
     public void setZombiesInGrid(ArrayList<Zombie> zombiesInGrid) {
         ZombiesInGrid = zombiesInGrid;

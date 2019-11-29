@@ -4,12 +4,18 @@ import java.util.ArrayList;
 
 public class Level {
 
-    public String getPlantLocked() {
-        return PlantLocked;
+    private String PlanttobeUnLocked;
+    private int GridSize;
+    private float SunValue;
+    private ArrayList<LawnMover> LawnMoversList = new ArrayList<LawnMover>();
+    private ArrayList<Zombie> ZombiesList = new ArrayList<Zombie>();
+
+    public String getPlanttobeLocked() {
+        return PlanttobeUnLocked;
     }
 
-    public void setPlantLocked(String plantLocked) {
-        PlantLocked = plantLocked;
+    public void setPlanttobeUnLocked(String PlanttobeUnLocked) {
+        this.PlanttobeUnLocked = PlanttobeUnLocked;
     }
 
     public int getGridSize() {
@@ -43,10 +49,4 @@ public class Level {
     public void setZombiesList(ArrayList<Zombie> zombiesList) {
         ZombiesList = zombiesList;
     }
-
-    private String PlantLocked;
-    private int GridSize;
-    private float SunValue;
-    private ArrayList<LawnMover> LawnMoversList = new ArrayList<LawnMover>();
-    private ArrayList<Zombie> ZombiesList = new ArrayList<Zombie>();
 }

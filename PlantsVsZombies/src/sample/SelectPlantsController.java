@@ -22,8 +22,12 @@ import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class SelectPlantsController extends Controller{
+    private static int numberofplants=1;
+
 
     Image PeaShooterButtonOn=new Image("sample/PeaShooterSelected.png");
     Image PeaShooterButtonOff=new Image("sample/Peashooter1.png");
@@ -33,7 +37,6 @@ public class SelectPlantsController extends Controller{
     Image SunflowerButtonOff=new Image("sample/Sunflower1.png");
     private static Boolean SunflowerOn=true;
     private static Boolean SunflowerOff=false;
-
     public void PeaShooterpressed( MouseEvent mouseEvent)
     {
         ImageView PeaShooterButton=(ImageView)mouseEvent.getSource();
@@ -59,40 +62,42 @@ public class SelectPlantsController extends Controller{
     {
         ImageView SunflowerButton=(ImageView)mouseEvent.getSource();
         SunflowerButton.setEffect(null);
-        if(!SunflowerOn)
+        if(!SunflowerOn )
         {
             SunflowerButton.setImage(SunflowerButtonOff);
             SunflowerOff=false;
             SunflowerOn=true;
+            numberofplants++;
         }
-        else
+        else if(numberofplants>0)
         {
             SunflowerButton.setImage(SunflowerButtonOn);
             SunflowerOff=true;
             SunflowerOn=false;
+            numberofplants--;
         }
-
-        System.out.println("PlayReleased");
+        System.out.println("Numberofplants "+numberofplants);
     }
 
     public void PeaShooterreleased(MouseEvent mouseEvent)
     {
         ImageView PeaShooterButton=(ImageView)mouseEvent.getSource();
         PeaShooterButton.setEffect(null);
-        if(!PeaShooterOn)
+        if(!PeaShooterOn )
         {
             PeaShooterButton.setImage(PeaShooterButtonOff);
             PeaShooterOff=false;
             PeaShooterOn=true;
+            numberofplants++;
         }
-        else
+        else if(numberofplants>0)
         {
             PeaShooterButton.setImage(PeaShooterButtonOn);
             PeaShooterOff=true;
             PeaShooterOn=false;
+            numberofplants--;
         }
-
-        System.out.println("PlayReleased");
+        System.out.println("Numberofplants "+numberofplants);
     }
 
     public void Backpressed( MouseEvent mouseEvent)
@@ -133,6 +138,8 @@ public class SelectPlantsController extends Controller{
     public void OkReleased(MouseEvent mouseEvent) throws IOException {
         //Handle IOException
         //If Exception set an image game closed abruptly
+        Player current=Main.getCurrentPlayer();
+        System.out.println(current.getPlayerGame().getSelectedPlants()+" 312321321321");
         final ImageView SelectedZombie = new ImageView();
         Image Zombie = new Image("sample/zombie_normal.gif");
         SelectedZombie.setImage(Zombie);
