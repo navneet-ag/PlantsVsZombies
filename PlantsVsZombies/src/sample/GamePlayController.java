@@ -24,8 +24,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class GamePlayController extends Controller {
+    public static Level L1=Main.getCurrentPlayer().getPlayerGame().getCurrentLevel();
     @FXML
-    public ImageView Tile00;
+    public static ImageView Tile00;
     @FXML
     public ImageView Tile01;
     @FXML
@@ -41,7 +42,7 @@ public class GamePlayController extends Controller {
     @FXML
     public ImageView Tile07;
     @FXML
-    public ImageView Tile08;
+    public static ImageView Tile08;
     @FXML
     public ImageView Tile10;
     @FXML
@@ -174,11 +175,25 @@ public class GamePlayController extends Controller {
     }
     public void PlacePlant(DragEvent dragEvent) throws IOException
     {
-        Image img=dragEvent.getDragboard().getImage();
+        Image img=  dragEvent.getDragboard().getImage();
+        Node asd= (Node) dragEvent.getSource();
         ImageView current=(ImageView)dragEvent.getSource();
-        if(current.getImage() == null)
-            current.setImage(img);
-        System.out.println(current.getX());
+        if(current.getImage() == null) {
+            if(    L1.getPlantsList().get(L1.getPlantsList().size()-1) instanceof PeaShooter)
+            {
+//                System.out.println("uiuoiu");
+//                System.out.println(Tile08);
+//                System.out.println("uiasboasbdoas");
+                current.setImage(img);
+
+                PeaShooter peashooterplant= (PeaShooter) L1.getPlantsList().get(L1.getPlantsList().size()-1);
+                peashooterplant.setMyavatar(current);
+                peashooterplant.setrootxy(L1.getRoot(),asd.getLayoutX()+asd.getParent().getLayoutX() +asd.getParent().getParent().getLayoutX(),asd.getLayoutY()+asd.getParent().getLayoutY() +asd.getParent().getParent().getLayoutY());
+//                current.get
+                System.out.println(asd.getLayoutX()+"  "+asd.getParent().getLayoutX()+" " +asd.getParent().getParent().getLayoutX());
+                System.out.println(asd.getLayoutY()+"  "+asd.getParent().getLayoutY()+" " +asd.getParent().getParent().getLayoutY());
+            }
+        }System.out.println(current.getX());
     }
     public void IsTileFree(DragEvent dragEvent) throws IOException
     {
@@ -187,5 +202,4 @@ public class GamePlayController extends Controller {
             dragEvent.acceptTransferModes(TransferMode.ANY);
         }
     }
-
 }

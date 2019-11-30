@@ -8,8 +8,10 @@ public class Game {
     private ArrayList<String> SelectedPlants = new ArrayList<String>();
     private ArrayList<Zombie> ZombiesInGrid = new ArrayList<Zombie>();
     private ArrayList<Sun> SunInGrid = new ArrayList<Sun>();
-
-
+    public Game()
+    {
+        CurrentLevel=new Level();
+    }
     public Level getCurrentLevel() {
         return CurrentLevel;
     }

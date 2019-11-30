@@ -2,7 +2,7 @@ package sample;
 
 public class Plant extends Avatar {
     protected float RegenerationTime;
-
+//    protected String TileNumber
     public float getRegenerationTime() {
         return RegenerationTime;
     }
