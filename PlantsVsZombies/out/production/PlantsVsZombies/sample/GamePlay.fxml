@@ -18,7 +18,10 @@
             <children>
                 <AnchorPane layoutX="50.0" layoutY="7.0">
                     <children>
-                        <AnchorPane prefHeight="62.0" prefWidth="47.0" />
+                        <AnchorPane prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                            <AnchorPane layoutX="-11.0" layoutY="20.0" prefHeight="50.0" prefWidth="82.0" />
+                     </children></AnchorPane>
                         <AnchorPane layoutY="62.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="124.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="186.0" prefHeight="62.0" prefWidth="47.0" />
@@ -43,7 +46,14 @@
                 </AnchorPane>
                 <AnchorPane layoutX="148.0" layoutY="4.0">
                     <children>
-                        <AnchorPane layoutY="4.0" prefHeight="62.0" prefWidth="47.0" />
+                        <AnchorPane layoutY="4.0" prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="-2.0" layoutY="-5.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
                         <AnchorPane layoutY="67.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="130.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="191.0" prefHeight="62.0" prefWidth="47.0" />
@@ -52,7 +62,14 @@
                 </AnchorPane>
                 <AnchorPane layoutX="201.0" layoutY="3.0">
                     <children>
-                        <AnchorPane layoutY="3.0" prefHeight="62.0" prefWidth="47.0" />
+                        <AnchorPane layoutY="3.0" prefHeight="62.0" prefWidth="47.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="27.0" layoutY="-29.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Gameplay/PlantCards/SunflowerSeedPacket.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
                         <AnchorPane layoutY="67.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="130.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="192.0" prefHeight="62.0" prefWidth="47.0" />
@@ -160,65 +177,37 @@
                 </AnchorPane>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="22.0" layoutY="9.0">
-            <children>
-                <AnchorPane layoutX="50.0" prefHeight="50.0" prefWidth="47.0" />
-                <AnchorPane layoutX="97.0" prefHeight="50.0" prefWidth="47.0" />
-                <AnchorPane layoutX="144.0" prefHeight="50.0" prefWidth="47.0" />
-                <AnchorPane layoutX="191.0" prefHeight="50.0" prefWidth="47.0">
-               <children>
-                  <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="1.0" layoutY="-6.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
-                     </image>
-                  </ImageView>
-               </children></AnchorPane>
-                <AnchorPane layoutX="238.0" prefHeight="50.0" prefWidth="47.0">
-               <children>
-                  <ImageView fitHeight="62.0" fitWidth="61.0" layoutX="1.0" layoutY="-6.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Gameplay/PlantCards/SunflowerSeedPacket.png" />
-                     </image>
-                  </ImageView>
-               </children></AnchorPane>
-                <AnchorPane prefHeight="51.0" prefWidth="47.0">
-               <children>
-                  <ImageView fitHeight="40.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Gameplay/sun.gif" />
-                     </image>
-                  </ImageView>
-               </children></AnchorPane>
-                <AnchorPane layoutX="299.0" prefHeight="50.0" prefWidth="47.0">
-                    <children>
-                        <ImageView fitHeight="55.0" fitWidth="47.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@Images/Plants/Plough.png" />
-                            </image>
-                        </ImageView>
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="506.0" prefHeight="50.0" prefWidth="82.0">
-                    <children>
-                        <ImageView fitHeight="62.0" fitWidth="104.0" layoutX="-14.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#MenuPressed" onMouseReleased="#MenuReleased" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@Images/Gameplay/MenuButton.png" />
-                            </image>
-                        </ImageView>
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutY="56.0" prefHeight="27.0" prefWidth="40.0">
-               <children>
-                  <TextField blendMode="ADD" layoutX="3.0" layoutY="1.0" prefHeight="26.0" prefWidth="38.0">
-                     <effect>
-                        <Shadow color="#901b1b" />
-                     </effect>
-                  </TextField>
-                  <Label alignment="CENTER" blendMode="DARKEN" layoutX="4.0" prefHeight="26.0" prefWidth="30.0" text="100" />
-               </children></AnchorPane>
-            <Label blendMode="MULTIPLY" layoutX="53.0" layoutY="24.0" prefHeight="40.0" prefWidth="75.0" text="Lucifer" textFill="#000000b8" />
-            </children>
-        </AnchorPane>
+        <AnchorPane layoutX="22.0" layoutY="9.0" />
       <ProgressBar blendMode="EXCLUSION" layoutX="409.0" layoutY="432.0" prefWidth="200.0" progress="0.3" />
+          <AnchorPane prefHeight="50.0" prefWidth="47.0" />
+      <Label blendMode="MULTIPLY" layoutX="64.0" layoutY="27.0" prefHeight="33.0" prefWidth="55.0" text="Lucifer" textFill="#000000b8" />
+          <AnchorPane layoutX="256.0" layoutY="6.0" prefHeight="51.0" prefWidth="47.0" />
+            <ImageView fitHeight="62.0" fitWidth="104.0" layoutX="509.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#MenuPressed" onMouseReleased="#MenuReleased" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@Images/Gameplay/MenuButton.png" />
+                </image>
+            </ImageView>
+          <AnchorPane layoutX="44.0" layoutY="75.0" prefHeight="27.0" prefWidth="40.0" />
+      <Label alignment="CENTER" blendMode="DARKEN" layoutX="23.0" layoutY="62.0" prefHeight="26.0" prefWidth="30.0" text="100" />
+      <TextField blendMode="ADD" layoutX="26.0" layoutY="108.0" prefHeight="26.0" prefWidth="38.0">
+         <effect>
+            <Shadow color="#901b1b" />
+         </effect>
+      </TextField>
+            <ImageView fitHeight="55.0" fitWidth="47.0" layoutX="311.0" layoutY="27.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@Images/Plants/Plough.png" />
+                </image>
+            </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="24.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Gameplay/sun.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="157.0" layoutY="-18.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

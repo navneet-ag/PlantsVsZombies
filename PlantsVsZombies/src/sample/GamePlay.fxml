@@ -46,14 +46,7 @@
                 </AnchorPane>
                 <AnchorPane layoutX="148.0" layoutY="4.0">
                     <children>
-                        <AnchorPane layoutY="4.0" prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                        <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="-2.0" layoutY="-5.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
-                           </image>
-                        </ImageView>
-                     </children></AnchorPane>
+                        <AnchorPane layoutY="4.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="67.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="130.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="191.0" prefHeight="62.0" prefWidth="47.0" />
@@ -62,14 +55,7 @@
                 </AnchorPane>
                 <AnchorPane layoutX="201.0" layoutY="3.0">
                     <children>
-                        <AnchorPane layoutY="3.0" prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                        <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="27.0" layoutY="-29.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Gameplay/PlantCards/SunflowerSeedPacket.png" />
-                           </image>
-                        </ImageView>
-                     </children></AnchorPane>
+                        <AnchorPane layoutY="3.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="67.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="130.0" prefHeight="62.0" prefWidth="47.0" />
                         <AnchorPane layoutY="192.0" prefHeight="62.0" prefWidth="47.0" />
@@ -181,7 +167,6 @@
       <ProgressBar blendMode="EXCLUSION" layoutX="409.0" layoutY="432.0" prefWidth="200.0" progress="0.3" />
           <AnchorPane prefHeight="50.0" prefWidth="47.0" />
       <Label blendMode="MULTIPLY" layoutX="64.0" layoutY="27.0" prefHeight="33.0" prefWidth="55.0" text="Lucifer" textFill="#000000b8" />
-          <AnchorPane layoutX="256.0" layoutY="6.0" prefHeight="51.0" prefWidth="47.0" />
             <ImageView fitHeight="62.0" fitWidth="104.0" layoutX="509.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#MenuPressed" onMouseReleased="#MenuReleased" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="@Images/Gameplay/MenuButton.png" />
@@ -204,7 +189,22 @@
             <Image url="@Images/Gameplay/sun.gif" />
          </image>
       </ImageView>
-      <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="157.0" layoutY="-18.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="221.0" layoutY="1.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="44.0" layoutX="266.0" layoutY="1.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Gameplay/PlantCards/SunflowerSeedPacket.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="176.0" layoutY="1.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="131.0" layoutY="1.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
          </image>
