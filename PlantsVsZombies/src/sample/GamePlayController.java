@@ -175,13 +175,15 @@ public class GamePlayController extends Controller {
     public void PlacePlant(DragEvent dragEvent) throws IOException
     {
         Image img=dragEvent.getDragboard().getImage();
-        if(Tile00==null)
-            System.out.println("3123123123213");
-        Tile00.setImage(img);
+        ImageView current=(ImageView)dragEvent.getSource();
+        if(current.getImage() == null)
+            current.setImage(img);
+        System.out.println(current.getX());
     }
     public void IsTileFree(DragEvent dragEvent) throws IOException
     {
-        if(dragEvent.getDragboard().hasImage()){
+        ImageView current=(ImageView)dragEvent.getSource();
+        if(dragEvent.getDragboard().hasImage() && current.getImage()==null){
             dragEvent.acceptTransferModes(TransferMode.ANY);
         }
     }

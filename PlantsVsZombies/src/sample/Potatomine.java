@@ -3,6 +3,11 @@ package sample;
 import javafx.scene.image.ImageView;
 
 public class Potatomine extends Bomb {
+    protected static float PlantCost=25;
+
+    public static float getPlantCost() {
+        return PlantCost;
+    }
 
     public Potatomine()
     {
@@ -12,7 +17,6 @@ public class Potatomine extends Bomb {
         Myavatar.setFitWidth(44);
         Impact=25;
         ExplodeTime= (float) 7.5;
-        PlantCost=50;
         RegenerationTime= (float) 2.5;
         LifeStatus=true;
 

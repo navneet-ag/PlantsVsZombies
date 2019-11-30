@@ -193,22 +193,12 @@ public class SelectPlantsController extends Controller{
         PeaShooterCard.setLayoutX(131);
         PeaShooterCard.setLayoutY(1);
 
-        PeaShooterCard.setOnDragDetected(e ->
-        {
-            Dragboard dragboard= ((Node)e.getSource()).startDragAndDrop(TransferMode.ANY);
-            ClipboardContent clipboard=new ClipboardContent();
-            Image peashootergif=new Image("sample/pea_shooter.gif");
-            clipboard.putImage(peashootergif);
-            dragboard.setContent(clipboard);
-            e.consume();
-
-        });
-
         ImageView SunFlowerCard=new ImageView("sample/SunflowerSeedPacket.png");
         SunFlowerCard.setFitWidth(45);
         SunFlowerCard.setFitHeight(62);
         SunFlowerCard.setLayoutX(176);
         SunFlowerCard.setLayoutY(1);
+
 
         ImageView WallNutCard=new ImageView("sample/Wall-nutSeedPacket.png");
         WallNutCard.setFitWidth(45);
@@ -221,6 +211,136 @@ public class SelectPlantsController extends Controller{
         PotatoMineCard.setFitHeight(62);
         PotatoMineCard.setLayoutX(265);
         PotatoMineCard.setLayoutY(1);
+
+        FadeTransition fadepeashooter = new FadeTransition();
+        fadepeashooter.setDuration(Duration.seconds(10));
+        fadepeashooter.setFromValue(.1);
+        fadepeashooter.setToValue(1);
+        fadepeashooter.setCycleCount(1);
+        fadepeashooter.setAutoReverse(true);
+        fadepeashooter.setOnFinished((new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                FadeTransition a=(FadeTransition)actionEvent.getSource();
+                a.setNode(null);
+            }
+        }));
+
+        FadeTransition fadesunflower = new FadeTransition();
+        fadesunflower.setDuration(Duration.seconds(10));
+        fadesunflower.setFromValue(.1);
+        fadesunflower.setToValue(1);
+        fadesunflower.setCycleCount(1);
+        fadesunflower.setAutoReverse(true);
+        fadesunflower.setOnFinished((new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                FadeTransition a=(FadeTransition)actionEvent.getSource();
+                a.setNode(null);
+            }
+        }));
+        FadeTransition fadepotatomine = new FadeTransition();
+        fadepotatomine.setDuration(Duration.seconds(10));
+        fadepotatomine.setFromValue(.1);
+        fadepotatomine.setToValue(1);
+        fadepotatomine.setCycleCount(1);
+        fadepotatomine.setAutoReverse(true);
+        fadepotatomine.setOnFinished((new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                FadeTransition a=(FadeTransition)actionEvent.getSource();
+                a.setNode(null);
+            }
+        }));
+        FadeTransition fadewallnut = new FadeTransition();
+        fadewallnut.setDuration(Duration.seconds(10));
+        fadewallnut.setFromValue(.1);
+        fadewallnut.setToValue(1);
+        fadewallnut.setCycleCount(1);
+        fadewallnut.setAutoReverse(true);
+        fadewallnut.setOnFinished((new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                FadeTransition a=(FadeTransition)actionEvent.getSource();
+                a.setNode(null);
+            }
+        }));
+
+        PeaShooterCard.setOnDragDetected(e ->
+        {
+            System.out.println(fadepeashooter.getNode());
+            if(SunAvailbleValue>=PeaShooter.getPlantCost() && fadepeashooter.getNode()==null)
+            {
+            Dragboard dragboard= ((Node)e.getSource()).startDragAndDrop(TransferMode.ANY);
+            ClipboardContent clipboard=new ClipboardContent();
+            Image peashootergif=new Image("sample/pea_shooter.gif");
+            clipboard.putImage(peashootergif);
+            dragboard.setContent(clipboard);
+                ImageView PlantButton=(ImageView)e.getSource();
+                PlantButton.setEffect(null);
+                fadepeashooter.setNode(PlantButton);
+                fadepeashooter.play();
+            e.consume();
+                SunAvailbleValue-=PeaShooter.getPlantCost();
+                SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+
+            }
+        });
+
+        SunFlowerCard.setOnDragDetected(e ->
+        {
+            if(SunAvailbleValue>=Sunflower.getPlantCost() && fadesunflower.getNode()==null) {
+                Dragboard dragboard = ((Node) e.getSource()).startDragAndDrop(TransferMode.ANY);
+                ClipboardContent clipboard = new ClipboardContent();
+                Image peashootergif = new Image("sample/sun_flower.gif");
+                clipboard.putImage(peashootergif);
+                dragboard.setContent(clipboard);
+                e.consume();
+                ImageView PlantButton=(ImageView)e.getSource();
+                PlantButton.setEffect(null);
+                fadesunflower.setNode(PlantButton);
+                fadesunflower.play();
+                SunAvailbleValue-=Sunflower.getPlantCost();
+                SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+
+            }
+        });
+
+        WallNutCard.setOnDragDetected(e ->
+        {
+            if(SunAvailbleValue>=Wallnut.getPlantCost() && fadewallnut.getNode()==null) {
+                Dragboard dragboard = ((Node) e.getSource()).startDragAndDrop(TransferMode.ANY);
+                ClipboardContent clipboard = new ClipboardContent();
+                Image peashootergif = new Image("sample/walnut_full_life.gif");
+                clipboard.putImage(peashootergif);
+                dragboard.setContent(clipboard);
+                e.consume();
+                ImageView PlantButton=(ImageView)e.getSource();
+                PlantButton.setEffect(null);
+                fadewallnut.setNode(PlantButton);
+                fadewallnut.play();
+                SunAvailbleValue-=Wallnut.getPlantCost();
+                SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+
+            }
+        });
+        PotatoMineCard.setOnDragDetected(e ->
+        {
+            if(SunAvailbleValue>=Potatomine.getPlantCost() && fadepotatomine.getNode()==null) {
+                Dragboard dragboard = ((Node) e.getSource()).startDragAndDrop(TransferMode.ANY);
+                ClipboardContent clipboard = new ClipboardContent();
+                Image peashootergif = new Image("sample/Potato_Mine.png");
+                clipboard.putImage(peashootergif);
+                dragboard.setContent(clipboard);
+                e.consume();
+                ImageView PlantButton=(ImageView)e.getSource();
+                PlantButton.setEffect(null);
+                fadepotatomine.setNode(PlantButton);
+                fadepotatomine.play();
+                SunAvailbleValue-=Potatomine.getPlantCost();
+                SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+            }
+        });
 
         Label NameLabel=new Label();
         NameLabel.setPrefWidth(71);
@@ -236,8 +356,8 @@ public class SelectPlantsController extends Controller{
         SunAvailableLabel.setPrefHeight(26);
         SunAvailableLabel.setLayoutX(23);
         SunAvailableLabel.setLayoutY(62);
-        SunAvailableLabel.setText("25");
-        SunAvailbleValue=25;
+        SunAvailableLabel.setText("100");
+        SunAvailbleValue=100;
         SunAvailableLabel.setBlendMode(BlendMode.DARKEN);
 
         Image Zombie = new Image("sample/zombie_normal.gif");
@@ -261,7 +381,6 @@ public class SelectPlantsController extends Controller{
             ShootPea.setLayoutX(ShootPea.getLayoutX()+1);
             if (ShootPea.getLayoutX()>SelectedZombie.getLayoutX())
             {
-
                 ShootPea.setImage(null);
 //                System.out.println("collllision");
             }
