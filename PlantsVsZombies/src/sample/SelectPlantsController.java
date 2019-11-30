@@ -242,7 +242,7 @@ public class SelectPlantsController extends Controller{
             }
         }));
         FadeTransition fadepotatomine = new FadeTransition();
-        fadepotatomine.setDuration(Duration.seconds(10));
+        fadepotatomine.setDuration(Duration.seconds(Potatomine.getRegenerationTime()));
         fadepotatomine.setFromValue(.1);
         fadepotatomine.setToValue(1);
         fadepotatomine.setCycleCount(1);
@@ -336,12 +336,14 @@ public class SelectPlantsController extends Controller{
             if(SunAvailbleValue>=Potatomine.getPlantCost() && fadepotatomine.getNode()==null) {
                 Dragboard dragboard = ((Node) e.getSource()).startDragAndDrop(TransferMode.ANY);
                 ClipboardContent clipboard = new ClipboardContent();
-                Image peashootergif = new Image("sample/Potato_Mine.png");
+                Potatomine potatomineplant=new Potatomine(Main.getCurrentPlayer().getPlayerGame().getCurrentLevel());
+                Image peashootergif = potatomineplant.getMyimage();
                 clipboard.putImage(peashootergif);
                 dragboard.setContent(clipboard);
-                e.consume();
+                PlantsPlaced.add(potatomineplant);
                 ImageView PlantButton=(ImageView)e.getSource();
                 PlantButton.setEffect(null);
+                e.consume();
                 fadepotatomine.setNode(PlantButton);
                 fadepotatomine.play();
                 SunAvailbleValue-=Potatomine.getPlantCost();

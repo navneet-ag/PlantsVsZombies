@@ -26,7 +26,7 @@ import java.util.List;
 public class GamePlayController extends Controller {
     public static Level L1=Main.getCurrentPlayer().getPlayerGame().getCurrentLevel();
     @FXML
-    public static ImageView Tile00;
+    public  ImageView Tile00;
     @FXML
     public ImageView Tile01;
     @FXML
@@ -42,7 +42,7 @@ public class GamePlayController extends Controller {
     @FXML
     public ImageView Tile07;
     @FXML
-    public static ImageView Tile08;
+    public  ImageView Tile08;
     @FXML
     public ImageView Tile10;
     @FXML
@@ -218,6 +218,19 @@ public class GamePlayController extends Controller {
                 Wallnut wallnutplant= (Wallnut) L1.getPlantsList().get(L1.getPlantsList().size()-1);
                 wallnutplant.setMyavatar(current);
                 wallnutplant.setrootxy(L1.getRoot(),node.getLayoutX()+node.getParent().getLayoutX() +node.getParent().getParent().getLayoutX(),node.getLayoutY()+node.getParent().getLayoutY() +node.getParent().getParent().getLayoutY());
+//                current.get
+//                System.out.println(node.getLayoutX()+"  "+node.getParent().getLayoutX()+" " +node.getParent().getParent().getLayoutX());
+//                System.out.println(node.getLayoutY()+"  "+node.getParent().getLayoutY()+" " +node.getParent().getParent().getLayoutY());
+            }
+            else if(    L1.getPlantsList().get(L1.getPlantsList().size()-1) instanceof Potatomine)
+            {
+//                System.out.println("uiuoiu");
+//                System.out.println(Tile08);
+//                System.out.println("uiasboasbdoas");
+                current.setImage(img);
+                Potatomine Potatomineplant= (Potatomine) L1.getPlantsList().get(L1.getPlantsList().size()-1);
+                Potatomineplant.setMyavatar(current);
+                Potatomineplant.setrootxy(L1.getRoot(),node.getLayoutX()+node.getParent().getLayoutX() +node.getParent().getParent().getLayoutX(),node.getLayoutY()+node.getParent().getLayoutY() +node.getParent().getParent().getLayoutY());
 //                current.get
 //                System.out.println(node.getLayoutX()+"  "+node.getParent().getLayoutX()+" " +node.getParent().getParent().getLayoutX());
 //                System.out.println(node.getLayoutY()+"  "+node.getParent().getLayoutY()+" " +node.getParent().getParent().getLayoutY());

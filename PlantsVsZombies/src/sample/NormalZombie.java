@@ -46,8 +46,7 @@ public class NormalZombie extends Zombie{
 //        SelectedZombie.relocate(560, 240);
         SelectedZombie.relocate(x,y);
 //        KeyFrame kf1 = new KeyFrame(Duration.millis(50), new SelectedZombieCollisionHandler());
-        KeyFrame kf3 = new KeyFrame(Duration.millis(10), event ->{
-
+        KeyFrame kf3 = new KeyFrame(Duration.millis(30), event ->{
 
             if(Health<=0)
             {
@@ -62,7 +61,7 @@ public class NormalZombie extends Zombie{
                 while (i<L1.getPlantsList().size())
                 {
                     float range= (float) (this.getY()+30-L1.getPlantsList().get(i).getY());
-                    System.out.println(range);
+//                    System.out.println(range);
                     if ( range>=-5 &&(range<=5))
 //                        System.out.println(range);
 //                        if(this.getY()==215)
@@ -76,12 +75,45 @@ public class NormalZombie extends Zombie{
                         {
                             PlantFlag=true;
                             L1.getPlantsList().get(i).reduceHealth(10);
-                            System.out.println(L1.getPlantsList().get(i).getHealth()+" "+L1.getPlantsList());
+//                            System.out.println(L1.getPlantsList().get(i).getHealth()+" "+L1.getPlantsList());
 
                             if(L1.getPlantsList().get(i) instanceof Wallnut )
                             {
 //                                L1.getPlantsList().get(i).getMyavatar().setImage(halflife);
                                 ((Wallnut) L1.getPlantsList().get(i)).sethalflife();
+                            }
+                            else if(L1.getPlantsList().get(i) instanceof Potatomine && ((Potatomine) L1.getPlantsList().get(i)).canbeusedstatus)
+                            {
+                                L1.getPlantsList().get(i).setHealth(50);
+                                double xpotato=L1.getPlantsList().get(i).getX();
+                                double ypotato=L1.getPlantsList().get(i).getY();
+                                int k=0;
+                                while(k<L1.getZombiesList().size())
+                                {
+                                    float tempx=L1.getZombiesList().get(k).getX();
+                                    float tempy=L1.getZombiesList().get(k).getY();
+                                    System.out.println(tempx+" "+tempy);
+                                    System.out.println(xpotato+" "+ypotato);
+
+                                    if(((xpotato-tempx)<50 && (ypotato-tempy)<60 &&(ypotato-tempy)>-60) || ((xpotato-tempx)>-50 && (ypotato-tempy)<60 &&(ypotato-tempy)>-60))
+                                    {
+                                        System.out.println("!2321312");
+                                        System.out.println(L1.getZombiesList().get(k));
+                                        L1.getZombiesList().get(k).setHealth(0);
+                                        L1.getZombiesList().get(k).getSelectedZombie().setVisible(false);
+                                        L1.getZombiesList().get(k).setLifeStatus(false);
+                                        System.out.println( "before" + L1.getZombiesList().size());
+                                        if(L1.getZombiesList().get(k).getHealth()<=0)
+                                        {
+                                            L1.RemoveZombie(L1.getZombiesList().get(k));
+                                            k--;
+                                        }
+                                        System.out.println("after"+  L1.getZombiesList().size());
+                                    }
+                                    k++;
+                                }
+                                L1.getPlantsList().get(i).setHealth(-1);
+
                             }
                             if(L1.getPlantsList().get(i).getHealth()<0)
                             {

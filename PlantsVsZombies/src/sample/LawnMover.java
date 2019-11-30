@@ -19,9 +19,7 @@ public class LawnMover {
 
         @Override
         public void handle(ActionEvent actionEvent) {
-
             CheckZombie(root2, L1);
-
         }
     }
 
