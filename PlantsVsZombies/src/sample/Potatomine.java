@@ -1,11 +1,13 @@
 package sample;
 
+import javafx.scene.Group;
 import javafx.scene.image.ImageView;
 
 public class Potatomine extends Bomb {
     protected static float PlantCost=25;
-    private static float RegenerationTime;
-
+    private static float RegenerationTime=10;
+    Group root2;
+    Level L1;
     public static float getRegenerationTime() {
         return RegenerationTime;
     }

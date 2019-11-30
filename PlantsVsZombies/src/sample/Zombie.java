@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.scene.image.ImageView;
+
 public class Zombie extends Avatar {
 
     protected float AttackPower;
@@ -8,6 +10,15 @@ public class Zombie extends Avatar {
     protected Boolean MoveStatus;
     protected float DefensePower;
 
+    public ImageView getSelectedZombie() {
+        return SelectedZombie;
+    }
+
+    public void setSelectedZombie(ImageView selectedZombie) {
+        SelectedZombie = selectedZombie;
+    }
+
+    protected ImageView SelectedZombie = new ImageView();
     public float getAttackPower() {
         return AttackPower;
     }

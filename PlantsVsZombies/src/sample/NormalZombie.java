@@ -54,8 +54,6 @@ public class NormalZombie extends Zombie{
                 root2.getChildren().remove(SelectedZombie);
             }
 
-
-
             else if (SelectedZombie.getLayoutX()>160)
             {
                 int i=0;

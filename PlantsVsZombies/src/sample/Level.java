@@ -3,6 +3,8 @@ package sample;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,6 +21,8 @@ public class Level {
     private ArrayList<Zombie> ZombiesList = new ArrayList<Zombie>();
     private ArrayList<Plant> PlantsList = new ArrayList<Plant>();
     private Group root;
+
+    private static int ZombiePass=0;
     public int getLevelNumber() {
         return LevelNumber;
     }
@@ -47,6 +51,8 @@ public class Level {
     }
 
 
+
+
     public void RemoveZombie(Zombie Z)
     {
         ZombiesList.remove(Z);
@@ -70,23 +76,69 @@ public class Level {
 //        ZombiesList.add(NZ4);
 //        ZombiesList.add(NZ5);
 //    }
-    public void setRootforLevel1(Group root2)
+
+//
+//    private class ZombiePassHandler implements EventHandler<ActionEvent>
+//    {
+//
+//
+//        @Override
+//        public void handle(ActionEvent actionEvent) {
+//
+//
+//
+//
+//        }
+//    }
+
+    public void CreateZombieL1P0(Group root2)
     {
-        this.root=root2;
         NormalZombie NZ01= new NormalZombie(600,95, root2,this);
         NormalZombie NZ02= new NormalZombie(650,215, root2,this);
-        NormalZombie NZ1= new NormalZombie(900,95, root2,this);
-        NormalZombie NZ2= new NormalZombie(900,150, root2,this);
-        NormalZombie NZ3= new NormalZombie(900,215, root2,this);
-        NormalZombie NZ4= new NormalZombie(900,275, root2,this);
-        NormalZombie NZ5= new NormalZombie(900,340, root2,this);
+
+
         ZombiesList.add(NZ01);
         ZombiesList.add(NZ02);
+    }
+
+
+    public void CreateZombieL1P1(Group root2)
+    {
+
+        NormalZombie NZ1= new NormalZombie(1900,95, root2,this);
+        NormalZombie NZ2= new NormalZombie(1900,150, root2,this);
+        NormalZombie NZ3= new NormalZombie(1900,215, root2,this);
+        NormalZombie NZ4= new NormalZombie(1900,275, root2,this);
+        NormalZombie NZ5= new NormalZombie(1900,340, root2,this);
+
+
         ZombiesList.add(NZ1);
         ZombiesList.add(NZ2);
         ZombiesList.add(NZ3);
         ZombiesList.add(NZ4);
         ZombiesList.add(NZ5);
+
+    }
+
+
+    public void setRootforLevel1(Group root2)
+    {
+
+
+
+        this.root=root2;
+
+//        NormalZombie NZ1= new NormalZombie(900,95, root2,this);
+//        NormalZombie NZ2= new NormalZombie(900,150, root2,this);
+//        NormalZombie NZ3= new NormalZombie(900,215, root2,this);
+//        NormalZombie NZ4= new NormalZombie(900,275, root2,this);
+//        NormalZombie NZ5= new NormalZombie(900,340, root2,this);
+
+//        ZombiesList.add(NZ1);
+//        ZombiesList.add(NZ2);
+//        ZombiesList.add(NZ3);
+//        ZombiesList.add(NZ4);
+//        ZombiesList.add(NZ5);
 
         LawnMover M1 = new LawnMover(115, 110,root2,this);
         LawnMover M2 = new LawnMover(115, 165,root2,this);
@@ -100,6 +152,30 @@ public class Level {
         LawnMoversList.add(M3);
         LawnMoversList.add(M4);
         LawnMoversList.add(M5);
+
+        KeyFrame kf2 = new KeyFrame(Duration.seconds(5), event -> {
+
+
+            if(ZombiePass==0)
+            {
+                CreateZombieL1P0(root);
+                ZombiePass++;
+            }
+            else if (ZombiePass==1)
+            {
+                CreateZombieL1P1(root);
+                ZombiePass++;
+            }
+
+
+
+
+
+        });
+
+        Timeline timeline2 = new Timeline(kf2);
+        timeline2.setCycleCount(3);
+        timeline2.play();
 
 
     }
