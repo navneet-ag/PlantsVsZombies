@@ -4,6 +4,15 @@ import javafx.scene.image.ImageView;
 
 public class Potatomine extends Bomb {
     protected static float PlantCost=25;
+    private static float RegenerationTime;
+
+    public static float getRegenerationTime() {
+        return RegenerationTime;
+    }
+
+    public static void setRegenerationTime(float regenerationTime) {
+        RegenerationTime = regenerationTime;
+    }
 
     public static float getPlantCost() {
         return PlantCost;

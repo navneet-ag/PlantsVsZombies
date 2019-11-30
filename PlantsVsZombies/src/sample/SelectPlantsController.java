@@ -36,8 +36,8 @@ import java.util.Random;
 //import static sample.GamePlayController.Tile00;
 
 public class SelectPlantsController extends Controller{
-    private Label SunAvailableLabel=new Label();
-    private int SunAvailbleValue=0;
+    private static Label SunAvailableLabel=new Label();
+    private static int SunAvailbleValue=0;
 
     final ImageView SelectedZombie = new ImageView();
     final ImageView ShootPea = new ImageView();
@@ -115,8 +115,6 @@ public class SelectPlantsController extends Controller{
     public void SunCreation()
     {
 //        System.out.println("insideeeeeeee");
-
-
         final ImageView Sun = new ImageView();
         Image suntoken = new Image("sample/sun.gif");
         Sun.setImage(suntoken);
@@ -127,17 +125,19 @@ public class SelectPlantsController extends Controller{
         Line linesun=new Line(x,100,x,400);
 
         PathTransition transtionsun=new PathTransition();
-        transtionsun.setNode(Sun);
         transtionsun.setDelay(Duration.seconds(5));
         transtionsun.setDuration(Duration.seconds(5));
         transtionsun.setPath(linesun);
         transtionsun.setCycleCount(1);
+        transtionsun.setNode(Sun);
         transtionsun.play();
         root2.getChildren().add(Sun);
         Sun.setOnMouseClicked(new EventHandler<MouseEvent>(){
 
             @Override
             public void handle(MouseEvent event) {
+                SunAvailbleValue+=25;
+                SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
                 Sun.setImage(null);
             }
         });
@@ -215,7 +215,7 @@ public class SelectPlantsController extends Controller{
         PotatoMineCard.setLayoutY(1);
 
         FadeTransition fadepeashooter = new FadeTransition();
-        fadepeashooter.setDuration(Duration.seconds(10));
+        fadepeashooter.setDuration(Duration.seconds(PeaShooter.getRegenerationTime()));
         fadepeashooter.setFromValue(.1);
         fadepeashooter.setToValue(1);
         fadepeashooter.setCycleCount(1);
@@ -229,7 +229,7 @@ public class SelectPlantsController extends Controller{
         }));
 
         FadeTransition fadesunflower = new FadeTransition();
-        fadesunflower.setDuration(Duration.seconds(10));
+        fadesunflower.setDuration(Duration.seconds(Sunflower.getRegenerationTime()));
         fadesunflower.setFromValue(.1);
         fadesunflower.setToValue(1);
         fadesunflower.setCycleCount(1);
@@ -255,7 +255,7 @@ public class SelectPlantsController extends Controller{
             }
         }));
         FadeTransition fadewallnut = new FadeTransition();
-        fadewallnut.setDuration(Duration.seconds(10));
+        fadewallnut.setDuration(Duration.seconds(Wallnut.getRegenerationTime()));
         fadewallnut.setFromValue(.1);
         fadewallnut.setToValue(1);
         fadewallnut.setCycleCount(1);
@@ -275,7 +275,7 @@ public class SelectPlantsController extends Controller{
             {
             Dragboard dragboard= ((Node)e.getSource()).startDragAndDrop(TransferMode.ANY);
             ClipboardContent clipboard=new ClipboardContent();
-                PeaShooter peashooterplant=new PeaShooter(Main.getCurrentPlayer().getPlayerGame().getCurrentLevel());
+            PeaShooter peashooterplant=new PeaShooter(Main.getCurrentPlayer().getPlayerGame().getCurrentLevel());
             Image peashootergif=peashooterplant.getMyimage();
             clipboard.putImage(peashootergif);
             dragboard.setContent(clipboard);
@@ -285,7 +285,7 @@ public class SelectPlantsController extends Controller{
                 fadepeashooter.setNode(PlantButton);
                 fadepeashooter.play();
             e.consume();
-                SunAvailbleValue-=PeaShooter.getPlantCost();
+                SunAvailbleValue-=Sunflower.getPlantCost();
                 SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
 
             }
@@ -296,14 +296,16 @@ public class SelectPlantsController extends Controller{
             if(SunAvailbleValue>=Sunflower.getPlantCost() && fadesunflower.getNode()==null) {
                 Dragboard dragboard = ((Node) e.getSource()).startDragAndDrop(TransferMode.ANY);
                 ClipboardContent clipboard = new ClipboardContent();
-                Image peashootergif = new Image("sample/sun_flower.gif");
+                Sunflower sunflowerplant=new Sunflower(Main.getCurrentPlayer().getPlayerGame().getCurrentLevel());
+                Image peashootergif = sunflowerplant.getMyimage();
                 clipboard.putImage(peashootergif);
                 dragboard.setContent(clipboard);
-                e.consume();
+                PlantsPlaced.add(sunflowerplant);
                 ImageView PlantButton=(ImageView)e.getSource();
                 PlantButton.setEffect(null);
                 fadesunflower.setNode(PlantButton);
                 fadesunflower.play();
+                e.consume();
                 SunAvailbleValue-=Sunflower.getPlantCost();
                 SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
 
@@ -315,17 +317,18 @@ public class SelectPlantsController extends Controller{
             if(SunAvailbleValue>=Wallnut.getPlantCost() && fadewallnut.getNode()==null) {
                 Dragboard dragboard = ((Node) e.getSource()).startDragAndDrop(TransferMode.ANY);
                 ClipboardContent clipboard = new ClipboardContent();
-                Image peashootergif = new Image("sample/walnut_full_life.gif");
-                clipboard.putImage(peashootergif);
+                Wallnut wallnutplant=new Wallnut(Main.getCurrentPlayer().getPlayerGame().getCurrentLevel());
+                Image wallnutgif = wallnutplant.getMyimage();
+                clipboard.putImage(wallnutgif);
                 dragboard.setContent(clipboard);
-                e.consume();
+                PlantsPlaced.add(wallnutplant);
                 ImageView PlantButton=(ImageView)e.getSource();
                 PlantButton.setEffect(null);
                 fadewallnut.setNode(PlantButton);
                 fadewallnut.play();
+                e.consume();
                 SunAvailbleValue-=Wallnut.getPlantCost();
                 SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
-
             }
         });
         PotatoMineCard.setOnDragDetected(e ->
@@ -468,5 +471,15 @@ public class SelectPlantsController extends Controller{
 
     }
 
+    public static Label getSunAvailableLabel() {
+        return SunAvailableLabel;
+    }
 
+    public static int getSunAvailbleValue() {
+        return SunAvailbleValue;
+    }
+
+    public static void setSunAvailbleValue(int sunAvailbleValue) {
+        SunAvailbleValue = sunAvailbleValue;
+    }
 }

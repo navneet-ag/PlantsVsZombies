@@ -87,6 +87,21 @@ public class Level {
         ZombiesList.add(NZ3);
         ZombiesList.add(NZ4);
         ZombiesList.add(NZ5);
+
+        LawnMover M1 = new LawnMover(115, 110,root2,this);
+        LawnMover M2 = new LawnMover(115, 165,root2,this);
+        LawnMover M3 = new LawnMover(115, 230,root2,this);
+        LawnMover M4 = new LawnMover(115, 290,root2,this);
+        LawnMover M5 = new LawnMover(110, 355,root2,this);
+
+
+        LawnMoversList.add(M1);
+        LawnMoversList.add(M2);
+        LawnMoversList.add(M3);
+        LawnMoversList.add(M4);
+        LawnMoversList.add(M5);
+
+
     }
 
     public Group getRoot() {

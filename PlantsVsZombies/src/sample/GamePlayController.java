@@ -124,7 +124,7 @@ public class GamePlayController extends Controller {
         shadow.setBlurType(BlurType.THREE_PASS_BOX);
         shadow.setColor(Color.rgb(14, 176, 52));
         MenuButton.setEffect(shadow);
-        System.out.println("PlayPressed");
+//        System.out.println("PlayPressed");
     }
 
     public void MenuReleased(MouseEvent mouseEvent) throws IOException {
@@ -143,7 +143,7 @@ public class GamePlayController extends Controller {
         window.setScene(newscene2);
         window.show();
 
-        System.out.println("PlayReleased");
+//        System.out.println("PlayReleased");
 
     }
     public void PlantPressed( MouseEvent mouseEvent)
@@ -153,7 +153,7 @@ public class GamePlayController extends Controller {
         shadow.setBlurType(BlurType.THREE_PASS_BOX);
         shadow.setColor(Color.rgb(14, 176, 52));
         PlantButton.setEffect(shadow);
-        System.out.println("PlayPressed");
+//        System.out.println("PlayPressed");
     }
 
     public void PlantReleased(MouseEvent mouseEvent) throws IOException {
@@ -171,12 +171,12 @@ public class GamePlayController extends Controller {
         fade.setNode(PlantButton);
         fade.play();
 
-        System.out.println("PlayReleased");
+//        System.out.println("PlayReleased");
     }
     public void PlacePlant(DragEvent dragEvent) throws IOException
     {
         Image img=  dragEvent.getDragboard().getImage();
-        Node asd= (Node) dragEvent.getSource();
+        Node node= (Node) dragEvent.getSource();
         ImageView current=(ImageView)dragEvent.getSource();
         if(current.getImage() == null) {
             if(    L1.getPlantsList().get(L1.getPlantsList().size()-1) instanceof PeaShooter)
@@ -188,12 +188,44 @@ public class GamePlayController extends Controller {
 
                 PeaShooter peashooterplant= (PeaShooter) L1.getPlantsList().get(L1.getPlantsList().size()-1);
                 peashooterplant.setMyavatar(current);
-                peashooterplant.setrootxy(L1.getRoot(),asd.getLayoutX()+asd.getParent().getLayoutX() +asd.getParent().getParent().getLayoutX(),asd.getLayoutY()+asd.getParent().getLayoutY() +asd.getParent().getParent().getLayoutY());
+                peashooterplant.setrootxy(L1.getRoot(),node.getLayoutX()+node.getParent().getLayoutX() +node.getParent().getParent().getLayoutX(),node.getLayoutY()+node.getParent().getLayoutY() +node.getParent().getParent().getLayoutY());
 //                current.get
-                System.out.println(asd.getLayoutX()+"  "+asd.getParent().getLayoutX()+" " +asd.getParent().getParent().getLayoutX());
-                System.out.println(asd.getLayoutY()+"  "+asd.getParent().getLayoutY()+" " +asd.getParent().getParent().getLayoutY());
+//                System.out.println(node.getLayoutX()+"  "+node.getParent().getLayoutX()+" " +node.getParent().getParent().getLayoutX());
+//                System.out.println(node.getLayoutY()+"  "+node.getParent().getLayoutY()+" " +node.getParent().getParent().getLayoutY());
             }
-        }System.out.println(current.getX());
+            else if(  L1.getPlantsList().get(L1.getPlantsList().size()-1) instanceof Sunflower)
+            {
+//                System.out.println("uiuoiu");
+//                System.out.println(Tile08);
+//                System.out.println("uiasboasbdoas");
+                current.setImage(img);
+                Sunflower sunflowerplant= (Sunflower) L1.getPlantsList().get(L1.getPlantsList().size()-1);
+                sunflowerplant.setMyavatar(current);
+//                sunflowerplant.setrootxy(L1.getRoot(),node.getLayoutX()+node.getParent().getLayoutX() +node.getParent().getParent().getLayoutX(),node.getLayoutY()+node.getParent().getLayoutY() +node.getParent().getParent().getLayoutY());
+//                current.get
+                sunflowerplant.setrootxy(L1.getRoot(),node.getLayoutX()+node.getParent().getLayoutX() +node.getParent().getParent().getLayoutX(),node.getLayoutY()+node.getParent().getLayoutY() +node.getParent().getParent().getLayoutY());
+
+//                System.out.println(node.getLayoutX()+"  "+node.getParent().getLayoutX()+" " +node.getParent().getParent().getLayoutX());
+//                System.out.println(node.getLayoutY()+"  "+node.getParent().getLayoutY()+" " +node.getParent().getParent().getLayoutY());
+            }
+            else if(    L1.getPlantsList().get(L1.getPlantsList().size()-1) instanceof Wallnut)
+            {
+//                System.out.println("uiuoiu");
+//                System.out.println(Tile08);
+//                System.out.println("uiasboasbdoas");
+                current.setImage(img);
+
+                Wallnut wallnutplant= (Wallnut) L1.getPlantsList().get(L1.getPlantsList().size()-1);
+                wallnutplant.setMyavatar(current);
+                wallnutplant.setrootxy(L1.getRoot(),node.getLayoutX()+node.getParent().getLayoutX() +node.getParent().getParent().getLayoutX(),node.getLayoutY()+node.getParent().getLayoutY() +node.getParent().getParent().getLayoutY());
+//                current.get
+//                System.out.println(node.getLayoutX()+"  "+node.getParent().getLayoutX()+" " +node.getParent().getParent().getLayoutX());
+//                System.out.println(node.getLayoutY()+"  "+node.getParent().getLayoutY()+" " +node.getParent().getParent().getLayoutY());
+            }
+
+
+        }
+//        System.out.println(current.getX());
     }
     public void IsTileFree(DragEvent dragEvent) throws IOException
     {

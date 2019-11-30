@@ -14,7 +14,16 @@ package sample;
 
 
 public class PeaShooter extends Shooter {
+
     protected static float PlantCost=100;
+    private static final float RegenerationTime=10;
+
+    Group root2;
+    Level L1;
+
+    public static float getRegenerationTime() {
+        return RegenerationTime;
+    }
 
     public static float getPlantCost() {
         return PlantCost;
@@ -31,9 +40,6 @@ public class PeaShooter extends Shooter {
 
         }
     }
-
-    Group root2;
-    Level L1;
     public PeaShooter(Level L1)
     {
 
@@ -42,8 +48,6 @@ public class PeaShooter extends Shooter {
         Myimage=new Image("sample/pea_shooter.gif");
         ShootingPower=20;
         PlantCost=100;
-        RegenerationTime=5;
-
     }
 
     public PeaShooter(Group root2, Level L1)
@@ -56,7 +60,6 @@ public class PeaShooter extends Shooter {
         Myavatar.setFitWidth(40);
         ShootingPower=20;
         PlantCost=100;
-        RegenerationTime=5;
 
 
         final ImageView SelectedPlant = new ImageView();
@@ -83,7 +86,7 @@ public class PeaShooter extends Shooter {
     public void setrootxy(Group root,double x,double y)
     {
         this.root2=root;
-        System.out.println(root2);
+//        System.out.println(root2);
         this.setX((float) x);
         this.setY((float) y);
         Timeline timeline3 = new Timeline(new KeyFrame(Duration.seconds(1),new ShootHandler()));

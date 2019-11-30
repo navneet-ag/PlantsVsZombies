@@ -50,6 +50,10 @@ public class Avatar implements Serializable {
         return Health;
     }
 
+    public void setHealth(float health) {
+        Health = health;
+    }
+
     public Boolean getLifeStatus() {
         return LifeStatus;
     }

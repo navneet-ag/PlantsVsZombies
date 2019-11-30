@@ -60,10 +60,11 @@ public class NormalZombie extends Zombie{
             {
                 int i=0;
                 Boolean PlantFlag=false;
+//                System.out.println(L1.getPlantsList());
                 while (i<L1.getPlantsList().size())
                 {
                     float range= (float) (this.getY()+30-L1.getPlantsList().get(i).getY());
-//                    System.out.println(range);
+                    System.out.println(range);
                     if ( range>=-5 &&(range<=5))
 //                        System.out.println(range);
 //                        if(this.getY()==215)
@@ -78,13 +79,19 @@ public class NormalZombie extends Zombie{
                             PlantFlag=true;
                             L1.getPlantsList().get(i).reduceHealth(10);
                             System.out.println(L1.getPlantsList().get(i).getHealth()+" "+L1.getPlantsList());
+
+                            if(L1.getPlantsList().get(i) instanceof Wallnut )
+                            {
+//                                L1.getPlantsList().get(i).getMyavatar().setImage(halflife);
+                                ((Wallnut) L1.getPlantsList().get(i)).sethalflife();
+                            }
                             if(L1.getPlantsList().get(i).getHealth()<0)
                             {
                                 L1.getPlantsList().get(i).getMyavatar().setImage(null);
 //                                System.out.println(L1.getPlantsList().get(i).getMyavatar());
 ////                                System.out.println(root2.);
 //                                System.out.println(root2.getChildren());
-//                                L1.getPlantsList().get(i).setLifeStatus(false);
+                                L1.getPlantsList().get(i).setLifeStatus(false);
                                 L1.getPlantsList().remove(L1.getPlantsList().get(i));
                                 i--;
 
