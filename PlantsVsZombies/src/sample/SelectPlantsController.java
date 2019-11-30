@@ -9,12 +9,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
+import javafx.scene.effect.BlendMode;
 import javafx.scene.effect.Bloom;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.Shadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.input.*;
+import javafx.scene.layout.GridPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
@@ -23,80 +26,24 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
-public class SelectPlantsController extends Controller{
+//import static sample.GamePlayController.Tile00;
 
-//    Image PeaShooterButtonOn=new Image("sample/PeaShooterSelected.png");
-//    Image PeaShooterButtonOff=new Image("sample/Peashooter1.png");
-//    private static Boolean PeaShooterOn=true;
-//    private static Boolean PeaShooterOff=false;
-//    Image SunflowerButtonOn=new Image("sample/SunflowerSelected.png");
-//    Image SunflowerButtonOff=new Image("sample/Sunflower1.png");
-//    private static Boolean SunflowerOn=true;
-//    private static Boolean SunflowerOff=false;
-//
-//    public void PeaShooterpressed( MouseEvent mouseEvent)
-//    {
-//        ImageView PeaShooterButton=(ImageView)mouseEvent.getSource();
-//        Shadow shadow=new Shadow();
-//        shadow.setBlurType(BlurType.THREE_PASS_BOX);
-//        shadow.setColor(Color.rgb(14, 176, 52));
-//        PeaShooterButton.setEffect(shadow);
-//        System.out.println("PlayPressed");
-//    }
-//
-//    public void Sunflowerpressed( MouseEvent mouseEvent)
-//    {
-//        ImageView SunflowerButton=(ImageView)mouseEvent.getSource();
-//        Shadow shadow=new Shadow();
-//        shadow.setBlurType(BlurType.THREE_PASS_BOX);
-//        shadow.setColor(Color.rgb(14, 176, 52));
-//        SunflowerButton.setEffect(shadow);
-//        System.out.println("PlayPressed");
-//    }
-//
-//
-//    public void Sunflowerreleased(MouseEvent mouseEvent)
-//    {
-//        ImageView SunflowerButton=(ImageView)mouseEvent.getSource();
-//        SunflowerButton.setEffect(null);
-//        if(!SunflowerOn)
-//        {
-//            SunflowerButton.setImage(SunflowerButtonOff);
-//            SunflowerOff=false;
-//            SunflowerOn=true;
-//        }
-//        else
-//        {
-//            SunflowerButton.setImage(SunflowerButtonOn);
-//            SunflowerOff=true;
-//            SunflowerOn=false;
-//        }
-//
-//        System.out.println("PlayReleased");
-//    }
-//
-//    public void PeaShooterreleased(MouseEvent mouseEvent)
-//    {
-//        ImageView PeaShooterButton=(ImageView)mouseEvent.getSource();
-//        PeaShooterButton.setEffect(null);
-//        if(!PeaShooterOn)
-//        {
-//            PeaShooterButton.setImage(PeaShooterButtonOff);
-//            PeaShooterOff=false;
-//            PeaShooterOn=true;
-//        }
-//        else
-//        {
-//            PeaShooterButton.setImage(PeaShooterButtonOn);
-//            PeaShooterOff=true;
-//            PeaShooterOn=false;
-//        }
-//
-//        System.out.println("PlayReleased");
-//    }
+public class SelectPlantsController extends Controller{
+    private Label SunAvailableLabel=new Label();
+    private int SunAvailbleValue=0;
+
+    final ImageView SelectedZombie = new ImageView();
+    final ImageView ShootPea = new ImageView();
+    Group root2=new Group();
+    Random Ran = new Random();
+
 
     public void Backpressed( MouseEvent mouseEvent)
     {
@@ -167,11 +114,6 @@ public class SelectPlantsController extends Controller{
     public void SunCreation()
     {
         System.out.println("insideeeeeeee");
-
-
-
-
-
         final ImageView Sun = new ImageView();
         Image suntoken = new Image("sample/sun.gif");
         Sun.setImage(suntoken);
@@ -194,16 +136,15 @@ public class SelectPlantsController extends Controller{
             @Override
             public void handle(MouseEvent event) {
                 Sun.setImage(null);
+                SunAvailbleValue+=25;
+                SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+
             }
         });
 
-
         Timeline timeline3 = new Timeline(new KeyFrame(Duration.seconds(15), new SunHandler()));
         timeline3.setCycleCount(1);
-
         timeline3.play();
-
-
 
     }
 
@@ -220,17 +161,85 @@ public class SelectPlantsController extends Controller{
         }
     }
 
-    final ImageView SelectedZombie = new ImageView();
-    final ImageView ShootPea = new ImageView();
-    Group root2=new Group();
-    Random Ran = new Random();
-
     public void OkReleased(MouseEvent mouseEvent) throws IOException {
         //Handle IOException
         //If Exception set an image game closed abruptly
 
+        Player CurrentPlayer=Main.getCurrentPlayer();
+        System.out.println(CurrentPlayer.getPlayerGame().getSelectedPlants()+" 312321321321");
+        ImageView PeaShooterCard=new ImageView("sample/PeashooterSeedPacket.png");
+        Boolean PeaShooterSelectionStatus=false;
+        Boolean SunFLowerSelectionStatus=false;
+        Boolean PotatoMineSelectionStatus=false;
+        Boolean WallNutSelectionStatus=false;
 
-        System.out.println(Main.getCurrentPlayer().getPlayerGame().getSelectedPlants());
+        ArrayList<String> SelectedPlantsList=  CurrentPlayer.getPlayerGame().getSelectedPlants();
+        for(int i=0;i<SelectedPlantsList.size();i++)
+        {
+            switch(SelectedPlantsList.get(i))
+            {
+                case "PeaShooter":PeaShooterSelectionStatus=true;
+                                    break;
+                case "Sunflower":SunFLowerSelectionStatus=true;
+                                    break;
+                case "WallNut":WallNutSelectionStatus=true;
+                                    break;
+                case "PotatoMine":PotatoMineSelectionStatus=true;
+                                    break;
+            }
+        }
+        PeaShooterCard.setFitWidth(45);
+        PeaShooterCard.setFitHeight(62);
+        PeaShooterCard.setLayoutX(131);
+        PeaShooterCard.setLayoutY(1);
+
+        PeaShooterCard.setOnDragDetected(e ->
+        {
+            Dragboard dragboard= ((Node)e.getSource()).startDragAndDrop(TransferMode.ANY);
+            ClipboardContent clipboard=new ClipboardContent();
+            Image peashootergif=new Image("sample/pea_shooter.gif");
+            clipboard.putImage(peashootergif);
+            dragboard.setContent(clipboard);
+            e.consume();
+
+        });
+
+        ImageView SunFlowerCard=new ImageView("sample/SunflowerSeedPacket.png");
+        SunFlowerCard.setFitWidth(45);
+        SunFlowerCard.setFitHeight(62);
+        SunFlowerCard.setLayoutX(176);
+        SunFlowerCard.setLayoutY(1);
+
+        ImageView WallNutCard=new ImageView("sample/Wall-nutSeedPacket.png");
+        WallNutCard.setFitWidth(45);
+        WallNutCard.setFitHeight(62);
+        WallNutCard.setLayoutX(221);
+        WallNutCard.setLayoutY(1);
+
+        ImageView PotatoMineCard=new ImageView("sample/PotatoMineSeedPacket.png");
+        PotatoMineCard.setFitWidth(45);
+        PotatoMineCard.setFitHeight(62);
+        PotatoMineCard.setLayoutX(265);
+        PotatoMineCard.setLayoutY(1);
+
+        Label NameLabel=new Label();
+        NameLabel.setPrefWidth(71);
+        NameLabel.setPrefHeight(33);
+        NameLabel.setLayoutX(64);
+        NameLabel.setLayoutY(27);
+        NameLabel.setText(CurrentPlayer.getName());
+        NameLabel.setBlendMode(BlendMode.MULTIPLY);
+
+        GridPane Tile1=new GridPane();
+//        Tile1.
+        SunAvailableLabel.setPrefWidth(38);
+        SunAvailableLabel.setPrefHeight(26);
+        SunAvailableLabel.setLayoutX(23);
+        SunAvailableLabel.setLayoutY(62);
+        SunAvailableLabel.setText("25");
+        SunAvailbleValue=25;
+        SunAvailableLabel.setBlendMode(BlendMode.DARKEN);
+
         Image Zombie = new Image("sample/zombie_normal.gif");
         SelectedZombie.setImage(Zombie);
         SelectedZombie.setFitHeight(70);
@@ -241,7 +250,6 @@ public class SelectPlantsController extends Controller{
 //        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(35), new KeyValue(SelectedZombie.layoutXProperty(),200)));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
-
 
 
         Image Pea = new Image("sample/Pea.png");
@@ -309,13 +317,23 @@ public class SelectPlantsController extends Controller{
 //        ((Group) tableparent).getChildren().add()
 //        Timeline timeline3 = new Timeline(new KeyFrame(Duration.seconds(2), new KeyValue(Sun.layoutYProperty(),400)));
 
-
-
         root2.getChildren().add(tableparent);
-//        root2.getChildren().add(Sun);
+
+        //        root2.getChildren().add(Sun);
         root2.getChildren().add(SelectedPlant);
         root2.getChildren().add(SelectedZombie);
         root2.getChildren().add(ShootPea);
+        if(PeaShooterSelectionStatus)
+            root2.getChildren().add(PeaShooterCard);
+        if(SunFLowerSelectionStatus)
+            root2.getChildren().add(SunFlowerCard);
+        if(PotatoMineSelectionStatus)
+            root2.getChildren().add(PotatoMineCard);
+        if(WallNutSelectionStatus)
+            root2.getChildren().add(WallNutCard);
+        root2.getChildren().add(SunAvailableLabel);
+        root2.getChildren().add(NameLabel);
+
         Scene tablescene =new Scene(root2);
         Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
 //        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();

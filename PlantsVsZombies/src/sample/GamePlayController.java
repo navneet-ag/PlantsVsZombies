@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.animation.FadeTransition;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
@@ -8,17 +9,115 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.effect.BlurType;
 import javafx.scene.effect.Shadow;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 
 public class GamePlayController extends Controller {
+    @FXML
+    public ImageView Tile00;
+    @FXML
+    public ImageView Tile01;
+    @FXML
+    public ImageView Tile02;
+    @FXML
+    public ImageView Tile03;
+    @FXML
+    public ImageView Tile04;
+    @FXML
+    public ImageView Tile05;
+    @FXML
+    public ImageView Tile06;
+    @FXML
+    public ImageView Tile07;
+    @FXML
+    public ImageView Tile08;
+    @FXML
+    public ImageView Tile10;
+    @FXML
+    public ImageView Tile11;
+    @FXML
+    public ImageView Tile12;
+    @FXML
+    public ImageView Tile13;
+    @FXML
+    public ImageView Tile14;
+    @FXML
+    public ImageView Tile15;
+    @FXML
+    public ImageView Tile16;
+    @FXML
+    public ImageView Tile17;
+    @FXML
+    public ImageView Tile18;
+    @FXML
+    public ImageView Tile20;
+    @FXML
+    public ImageView Tile21;
+    @FXML
+    public ImageView Tile22;
+    @FXML
+    public ImageView Tile23;
+    @FXML
+    public ImageView Tile24;
+    @FXML
+    public ImageView Tile25;
+    @FXML
+    public ImageView Tile26;
+    @FXML
+    public ImageView Tile27;
+    @FXML
+    public ImageView Tile28;
+    @FXML
+    public ImageView Tile30;
+    @FXML
+    public ImageView Tile31;
+    @FXML
+    public ImageView Tile32;
+    @FXML
+    public ImageView Tile33;
+    @FXML
+    public ImageView Tile34;
+    @FXML
+    public ImageView Tile35;
+    @FXML
+    public ImageView Tile36;
+    @FXML
+    public ImageView Tile37;
+    @FXML
+    public ImageView Tile38;
+    @FXML
+    public ImageView Tile40;
+    @FXML
+    public ImageView Tile41;
+    @FXML
+    public ImageView Tile42;
+    @FXML
+    public ImageView Tile43;
+    @FXML
+    public ImageView Tile44;
+    @FXML
+    public ImageView Tile45;
+    @FXML
+    public ImageView Tile46;
+    @FXML
+    public ImageView Tile47;
+    @FXML
+    public ImageView Tile48;
+
+
     public void MenuPressed( MouseEvent mouseEvent)
-    {
+    {    Image SoundButtonOn=new Image("sample/SoundOn.png");
         ImageView MenuButton=(ImageView)mouseEvent.getSource();
         Shadow shadow=new Shadow();
         shadow.setBlurType(BlurType.THREE_PASS_BOX);
@@ -73,6 +172,18 @@ public class GamePlayController extends Controller {
 
         System.out.println("PlayReleased");
     }
-
+    public void PlacePlant(DragEvent dragEvent) throws IOException
+    {
+        Image img=dragEvent.getDragboard().getImage();
+        if(Tile00==null)
+            System.out.println("3123123123213");
+        Tile00.setImage(img);
+    }
+    public void IsTileFree(DragEvent dragEvent) throws IOException
+    {
+        if(dragEvent.getDragboard().hasImage()){
+            dragEvent.acceptTransferModes(TransferMode.ANY);
+        }
+    }
 
 }

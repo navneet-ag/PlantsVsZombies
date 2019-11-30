@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GamePlayController">
     <children>
@@ -14,171 +14,13 @@
             <image>
                 <Image url="@Images/Gameplay/Grid.png" />
             </image></ImageView>
-        <AnchorPane layoutX="98.0" layoutY="106.0">
-            <children>
-                <AnchorPane layoutX="50.0" layoutY="7.0">
-                    <children>
-                        <AnchorPane prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                            <AnchorPane layoutX="-11.0" layoutY="20.0" prefHeight="50.0" prefWidth="82.0" />
-                     </children></AnchorPane>
-                        <AnchorPane layoutY="62.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="124.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="186.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                        <ImageView fitHeight="56.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Plants/sun_flower.gif" />
-                           </image>
-                        </ImageView>
-                     </children></AnchorPane>
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="97.0" layoutY="6.0">
-                    <children>
-                        <AnchorPane layoutY="3.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="66.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="130.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="191.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="47.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="148.0" layoutY="4.0">
-                    <children>
-                        <AnchorPane layoutY="4.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="67.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="130.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="191.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="252.0" prefHeight="62.0" prefWidth="47.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="201.0" layoutY="3.0">
-                    <children>
-                        <AnchorPane layoutY="3.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="67.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="130.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="192.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="254.0" prefHeight="62.0" prefWidth="47.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="248.0" prefHeight="310.0" prefWidth="47.0">
-                    <children>
-                        <AnchorPane layoutY="4.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="71.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="133.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="195.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="254.0" prefHeight="62.0" prefWidth="47.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="301.0" layoutY="1.0">
-                    <children>
-                        <AnchorPane layoutY="3.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="70.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="133.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="192.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="252.0" prefHeight="62.0" prefWidth="47.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="350.0">
-                    <children>
-                        <AnchorPane layoutY="7.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="72.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="133.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="197.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="253.0" prefHeight="62.0" prefWidth="47.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="400.0" layoutY="6.0">
-                    <children>
-                        <AnchorPane layoutY="2.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="68.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="129.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="190.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="249.0" prefHeight="62.0" prefWidth="47.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="447.0" layoutY="7.0">
-                    <children>
-                        <AnchorPane layoutY="2.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="63.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="126.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="188.0" prefHeight="62.0" prefWidth="47.0" />
-                        <AnchorPane layoutY="249.0" prefHeight="62.0" prefWidth="47.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutX="494.0" layoutY="7.0">
-                    <children>
-                        <AnchorPane layoutY="1.0" prefHeight="62.0" prefWidth="30.0" />
-                        <AnchorPane layoutY="64.0" prefHeight="62.0" prefWidth="30.0" />
-                        <AnchorPane layoutY="126.0" prefHeight="62.0" prefWidth="30.0" />
-                        <AnchorPane layoutY="187.0" prefHeight="62.0" prefWidth="30.0" />
-                        <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="30.0" />
-                    </children>
-                </AnchorPane>
-                <AnchorPane layoutY="6.0">
-                    <children>
-                        <AnchorPane prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Gameplay/lawn_mover.gif" />
-                           </image>
-                        </ImageView>
-                     </children></AnchorPane>
-                        <AnchorPane layoutY="62.0" prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="9.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Gameplay/lawn_mover.gif" />
-                           </image>
-                        </ImageView>
-                     </children></AnchorPane>
-                        <AnchorPane layoutY="124.0" prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="12.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Gameplay/lawn_mover.gif" />
-                           </image>
-                        </ImageView>
-                     </children></AnchorPane>
-                        <AnchorPane layoutY="184.0" prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="8.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Gameplay/lawn_mover.gif" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                        <AnchorPane layoutY="248.0" prefHeight="62.0" prefWidth="47.0">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="47.0" layoutX="2.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Gameplay/lawn_mover.gif" />
-                           </image>
-                        </ImageView>
-                     </children></AnchorPane>
-                    </children>
-                </AnchorPane>
-            </children>
-        </AnchorPane>
         <AnchorPane layoutX="22.0" layoutY="9.0" />
       <ProgressBar blendMode="EXCLUSION" layoutX="409.0" layoutY="432.0" prefWidth="200.0" progress="0.3" />
-          <AnchorPane prefHeight="50.0" prefWidth="47.0" />
-      <Label blendMode="MULTIPLY" layoutX="64.0" layoutY="27.0" prefHeight="33.0" prefWidth="55.0" text="Lucifer" textFill="#000000b8" />
             <ImageView fitHeight="62.0" fitWidth="104.0" layoutX="509.0" layoutY="9.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#MenuPressed" onMouseReleased="#MenuReleased" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="@Images/Gameplay/MenuButton.png" />
                 </image>
             </ImageView>
-          <AnchorPane layoutX="44.0" layoutY="75.0" prefHeight="27.0" prefWidth="40.0" />
-      <Label alignment="CENTER" blendMode="DARKEN" layoutX="23.0" layoutY="62.0" prefHeight="26.0" prefWidth="30.0" text="100" />
-      <TextField blendMode="ADD" layoutX="26.0" layoutY="108.0" prefHeight="26.0" prefWidth="38.0">
-         <effect>
-            <Shadow color="#901b1b" />
-         </effect>
-      </TextField>
             <ImageView fitHeight="55.0" fitWidth="47.0" layoutX="311.0" layoutY="27.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="@Images/Plants/Plough.png" />
@@ -189,25 +31,73 @@
             <Image url="@Images/Gameplay/sun.gif" />
          </image>
       </ImageView>
-      <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="221.0" layoutY="1.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="70.0" fitWidth="44.0" layoutX="266.0" layoutY="1.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/Gameplay/PlantCards/SunflowerSeedPacket.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="176.0" layoutY="1.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="62.0" fitWidth="53.0" layoutX="131.0" layoutY="1.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#PlantPressed" onMouseReleased="#PlantReleased" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/Gameplay/PlantCards/PeashooterSeedPacket.png" />
-         </image>
-      </ImageView>
+      <GridPane layoutX="156.0" layoutY="124.0" prefHeight="299.0" prefWidth="437.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="Tile00" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Tile01" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="Tile02" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="Tile03" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+            <ImageView fx:id="Tile04" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+            <ImageView fx:id="Tile05" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
+            <ImageView fx:id="Tile06" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
+            <ImageView fx:id="Tile07" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" />
+            <ImageView fx:id="Tile08" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" />
+            <ImageView fx:id="Tile41" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile31" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile10" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile20" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile30" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile40" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile21" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile12" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile11" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile22" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile32" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile42" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile43" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <ImageView fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile33" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile23" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile13" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile14" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile24" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile34" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile44" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile15" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile25" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile35" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile45" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile46" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile36" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile26" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile27" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile16" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile17" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile37" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile47" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile48" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile38" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile28" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile18" fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
     </children>
 </AnchorPane>
