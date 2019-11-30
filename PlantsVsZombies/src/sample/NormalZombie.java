@@ -46,7 +46,7 @@ public class NormalZombie extends Zombie{
 //        SelectedZombie.relocate(560, 240);
         SelectedZombie.relocate(x,y);
 //        KeyFrame kf1 = new KeyFrame(Duration.millis(50), new SelectedZombieCollisionHandler());
-        KeyFrame kf3 = new KeyFrame(Duration.millis(70), event ->{
+        KeyFrame kf3 = new KeyFrame(Duration.millis(10), event ->{
 
 
             if(Health<=0)

@@ -55,7 +55,7 @@ public class LawnMover {
         root2.getChildren().add(LawnMoverView);
 
 
-        Timeline timeline3 = new Timeline(new KeyFrame(Duration.seconds(1),new LawnMover.CheckZombieHandler()));
+        Timeline timeline3 = new Timeline(new KeyFrame(Duration.millis(100),new LawnMover.CheckZombieHandler()));
         timeline3.setCycleCount(Animation.INDEFINITE);
 
         timeline3.play();
@@ -81,25 +81,28 @@ public class LawnMover {
                 {
 
 
-                    System.out.println("inside if");
-                    KeyFrame kf2 = new KeyFrame(Duration.millis(25), event ->{
+//                    System.out.println("inside if");
+                    KeyFrame kf2 = new KeyFrame(Duration.millis(10), event ->{
                         LawnMoverView.setLayoutX(LawnMoverView.getLayoutX()+1);
+                        this.setX(this.getX()+1);
 
                         if(LawnMoverView.getLayoutX()>500)
                         {
                             LawnMoverView.setVisible(false);
-                            this.UseStatus=false;
+                            this.UseStatus=true;
 
 //                System.out.println("yes");
                         }
 
                         int j=0;
-                        while (j<L1.getZombiesList().size() )
+                        while (j<L1.getZombiesList().size() && LawnMoverView.getLayoutX()<600 )
                         {
                             if (this.getY()-L1.getZombiesList().get(j).getY() ==15 ) {
                                 if (L1.getZombiesList().get(j).getX()-this.getX()<51) {
 
                                     L1.getZombiesList().get(j).setHealth(0);
+
+                                    L1.getZombiesList().get(j).getSelectedZombie().setVisible(false);
                                     if(L1.getZombiesList().get(j).getHealth()<=0)
                                     {
                                         L1.RemoveZombie(L1.getZombiesList().get(j));

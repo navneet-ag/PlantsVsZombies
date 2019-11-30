@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.scene.Group;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Potatomine extends Bomb {
@@ -8,12 +9,20 @@ public class Potatomine extends Bomb {
     private static float RegenerationTime=10;
     Group root2;
     Level L1;
+
     public static float getRegenerationTime() {
         return RegenerationTime;
     }
 
     public static void setRegenerationTime(float regenerationTime) {
         RegenerationTime = regenerationTime;
+    }
+    public Potatomine(Level L1)
+    {
+        this.L1=L1;
+        Health=1000;
+        Myimage=new Image("sample/walnut_full_life.gif");
+        PlantCost=50;
     }
 
     public static float getPlantCost() {
