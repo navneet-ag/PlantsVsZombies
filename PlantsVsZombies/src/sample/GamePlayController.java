@@ -25,6 +25,7 @@ import java.util.List;
 
 public class GamePlayController extends Controller {
     public static Level L1=Main.getCurrentPlayer().getPlayerGame().getCurrentLevel();
+    public static Boolean plough=false;
     @FXML
     public  ImageView Tile00;
     @FXML
@@ -175,6 +176,7 @@ public class GamePlayController extends Controller {
     }
     public void PlacePlant(DragEvent dragEvent) throws IOException
     {
+
         Image img=  dragEvent.getDragboard().getImage();
         Node node= (Node) dragEvent.getSource();
         ImageView current=(ImageView)dragEvent.getSource();
@@ -248,4 +250,22 @@ public class GamePlayController extends Controller {
             dragEvent.acceptTransferModes(TransferMode.ANY);
         }
     }
+    public void RemovePlant(MouseEvent dragEvent) throws IOException
+    {
+        if(plough)
+        {
+            System.out.println("checking plogh");
+            ImageView current=(ImageView)dragEvent.getSource();
+            current.setImage(null);
+            plough=false;
+            return;
+        }
+    }
+    public void doPlough(MouseEvent dragEvent) throws IOException
+    {
+            plough=true;
+    }
+
+
+
 }

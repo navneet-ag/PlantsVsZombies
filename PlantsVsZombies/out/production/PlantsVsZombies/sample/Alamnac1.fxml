@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LeaderBoardController">
+    <children>
+        <ImageView fitHeight="469.0" fitWidth="639.0" layoutX="-6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Images/Leaderboard/Background.png" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="172.0" layoutY="23.0" prefHeight="34.0" prefWidth="278.0">
+            <children>
+                <ImageView fitHeight="89.0" fitWidth="301.0" layoutX="-7.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/Almanac.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="6.0" layoutY="14.0" prefHeight="54.0" prefWidth="102.0">
+            <children>
+                <ImageView fitHeight="45.0" fitWidth="102.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#Backpressed" onMouseReleased="#Backreleased" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/Leaderboard/Back.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+      <ImageView fitHeight="271.0" fitWidth="484.0" layoutX="69.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Alamnac1.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="504.0" layoutY="394.0" prefHeight="54.0" prefWidth="102.0">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="131.0" layoutX="-11.0" layoutY="6.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMousePressed="#Nextpressed" onMouseReleased="#Nextreleased" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Next.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -21,7 +21,7 @@
                     <Image url="@Images/Gameplay/MenuButton.png" />
                 </image>
             </ImageView>
-            <ImageView fitHeight="55.0" fitWidth="47.0" layoutX="311.0" layoutY="27.0" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="102.0" fitWidth="47.0" layoutX="321.0" layoutY="9.0" onDragDetected="#doPlough" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" onMouseReleased="#doPlough" pickOnBounds="true" preserveRatio="true">
                 <image>
                     <Image url="@Images/Plants/Plough.png" />
                 </image>
@@ -51,52 +51,52 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fx:id="Tile00" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="Tile01" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-            <ImageView fx:id="Tile02" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-            <ImageView fx:id="Tile03" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
-            <ImageView fx:id="Tile04" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
-            <ImageView fx:id="Tile05" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
-            <ImageView fx:id="Tile06" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
+            <ImageView fx:id="Tile00" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="Tile01" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="Tile02" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="Tile03" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+            <ImageView fx:id="Tile04" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+            <ImageView fx:id="Tile05" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
+            <ImageView fx:id="Tile06" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
             <ImageView fx:id="Tile07" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" />
             <ImageView fx:id="Tile08" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" />
-            <ImageView fx:id="Tile41" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <ImageView fx:id="Tile31" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile10" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-            <ImageView fx:id="Tile20" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile30" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile40" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
-            <ImageView fx:id="Tile21" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile12" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ImageView fx:id="Tile11" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ImageView fx:id="Tile22" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile32" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile42" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <ImageView fx:id="Tile43" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile41" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile31" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile10" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile20" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile30" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile40" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile21" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile12" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile11" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile22" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile32" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile42" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile43" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
             <ImageView fitHeight="61.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile33" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile23" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile13" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <ImageView fx:id="Tile14" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <ImageView fx:id="Tile24" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile34" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile44" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <ImageView fx:id="Tile15" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <ImageView fx:id="Tile25" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile35" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile45" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <ImageView fx:id="Tile46" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <ImageView fx:id="Tile36" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile26" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile27" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile16" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <ImageView fx:id="Tile17" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <ImageView fx:id="Tile37" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile47" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-            <ImageView fx:id="Tile48" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-            <ImageView fx:id="Tile38" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-            <ImageView fx:id="Tile28" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-            <ImageView fx:id="Tile18" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile33" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile23" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile13" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile14" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile24" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile34" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile44" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile15" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile25" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile35" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile45" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile46" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile36" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile26" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile27" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile16" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile17" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <ImageView fx:id="Tile37" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile47" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile48" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <ImageView fx:id="Tile38" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <ImageView fx:id="Tile28" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <ImageView fx:id="Tile18" fitHeight="61.0" fitWidth="48.0" onDragDropped="#PlacePlant" onDragOver="#IsTileFree" onMouseReleased="#RemovePlant" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1" />
          </children>
       </GridPane>
     </children>
