@@ -1,6 +1,8 @@
 package sample;
 
-public class Sun {
+import java.io.Serializable;
+
+public class Sun implements Serializable {
 
 
     public float getX() {

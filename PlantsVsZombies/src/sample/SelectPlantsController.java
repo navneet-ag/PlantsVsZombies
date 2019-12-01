@@ -137,6 +137,8 @@ public class SelectPlantsController extends Controller{
             @Override
             public void handle(MouseEvent event) {
                 SunAvailbleValue+=25;
+                Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().setSunValue(SunAvailbleValue);
+
                 SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
                 Sun.setImage(null);
             }
@@ -285,8 +287,10 @@ public class SelectPlantsController extends Controller{
                 fadepeashooter.setNode(PlantButton);
                 fadepeashooter.play();
             e.consume();
-                SunAvailbleValue-=Sunflower.getPlantCost();
+                SunAvailbleValue-=PeaShooter.getPlantCost();
                 SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+                Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().setSunValue(SunAvailbleValue);
+
 
             }
         });
@@ -308,6 +312,8 @@ public class SelectPlantsController extends Controller{
                 e.consume();
                 SunAvailbleValue-=Sunflower.getPlantCost();
                 SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+                Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().setSunValue(SunAvailbleValue);
+
 
             }
         });
@@ -329,6 +335,8 @@ public class SelectPlantsController extends Controller{
                 e.consume();
                 SunAvailbleValue-=Wallnut.getPlantCost();
                 SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+                Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().setSunValue(SunAvailbleValue);
+
             }
         });
         PotatoMineCard.setOnDragDetected(e ->
@@ -348,6 +356,8 @@ public class SelectPlantsController extends Controller{
                 fadepotatomine.play();
                 SunAvailbleValue-=Potatomine.getPlantCost();
                 SunAvailableLabel.setText(String.valueOf(SunAvailbleValue));
+                Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().setSunValue(SunAvailbleValue);
+
             }
         });
 
@@ -365,8 +375,11 @@ public class SelectPlantsController extends Controller{
         SunAvailableLabel.setPrefHeight(26);
         SunAvailableLabel.setLayoutX(23);
         SunAvailableLabel.setLayoutY(62);
-        SunAvailableLabel.setText("500");
-        SunAvailbleValue=500;
+        SunAvailableLabel.setText( String.valueOf(Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().getSunValue()));
+        SunAvailbleValue= (int) Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().getSunValue();
+//        SunAvailbleValue=500;
+//        Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().setSunValue(SunAvailbleValue);
+
         SunAvailableLabel.setBlendMode(BlendMode.DARKEN);
 
 //        Image Zombie = new Image("sample/zombie_normal.gif");
@@ -446,6 +459,7 @@ public class SelectPlantsController extends Controller{
         root2.getChildren().add(tableparent);
         Level L1 = Main.getCurrentPlayer().getPlayerGame().getCurrentLevel();
 //        Level L1 = new Level(root2);
+        L1.setRootforLevel1(root2);
         L1.setRootforLevel1(root2);
         SunCreation();
 

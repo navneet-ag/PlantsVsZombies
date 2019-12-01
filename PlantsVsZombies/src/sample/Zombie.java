@@ -10,7 +10,7 @@ public class Zombie extends Avatar {
     protected Boolean MoveStatus;
     protected float DefensePower;
 
-    public ImageView getSelectedZombie() {
+    public  ImageView getSelectedZombie() {
         return SelectedZombie;
     }
 
@@ -18,7 +18,7 @@ public class Zombie extends Avatar {
         SelectedZombie = selectedZombie;
     }
 
-    protected ImageView SelectedZombie = new ImageView();
+    protected  transient ImageView SelectedZombie = new ImageView();
     public float getAttackPower() {
         return AttackPower;
     }

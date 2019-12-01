@@ -1,20 +1,25 @@
 package sample;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Player {
+public class Player implements Serializable{
     private String Name;
     private int SlotsAvailable;
     private ArrayList<String> UnlockedPlants = new ArrayList<String>();
     private Long Score;
     private Game PlayerGame;
+    public Player()
+    {
 
-    public Player(String Name)
+    }
+
+    public Player(String Name,int level)
     {
         this.Name=Name;
         this.SlotsAvailable=2;
         this.Score=0L;
-        this.PlayerGame=new Game();
+        this.PlayerGame=new Game(level);
         this.UnlockedPlants.add("PeaShooter");
         this.UnlockedPlants.add("SunFlower");
         this.UnlockedPlants.add("WallNut");

@@ -1,6 +1,8 @@
 package sample;
 
-public class Pea {
+import java.io.Serializable;
+
+public class Pea implements Serializable {
 
     public float getX() {
         return x;

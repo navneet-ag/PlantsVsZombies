@@ -10,9 +10,8 @@ public class Avatar implements Serializable {
     protected float y;
     protected float Health;
     protected Boolean LifeStatus;
-    protected ImageView Myavatar;
-
-    protected Image Myimage;
+    protected transient ImageView Myavatar;
+    protected transient Image Myimage;
 
     public Image getMyimage() {
         return Myimage;

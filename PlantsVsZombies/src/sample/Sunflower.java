@@ -13,7 +13,7 @@ import javafx.util.Duration;
 public class Sunflower extends Suntoken {
     protected static float PlantCost=50;
     private static final float RegenerationTime=5;
-    private Group root2;
+    private transient Group root2;
     private Level L1;
     public Sunflower(Level L1)
     {

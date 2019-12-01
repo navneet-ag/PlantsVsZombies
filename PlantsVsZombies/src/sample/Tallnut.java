@@ -1,4 +1,4 @@
 package sample;
 
-public class Tallnut {
+public class Tallnut extends Barrier{
 }

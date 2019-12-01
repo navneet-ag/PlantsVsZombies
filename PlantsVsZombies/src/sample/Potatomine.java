@@ -13,7 +13,7 @@ import javafx.util.Duration;
 public class Potatomine extends Bomb {
     protected static float PlantCost = 25;
     private static final float RegenerationTime = 4;
-    Group root2;
+    transient Group root2;
     Level L1;
     public boolean canbeusedstatus = false;
 

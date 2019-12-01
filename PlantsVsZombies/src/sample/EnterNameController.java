@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class EnterNameController extends Controller{
+public class EnterNameController extends Controller {
 
     public void Backpressed( MouseEvent mouseEvent)
     {

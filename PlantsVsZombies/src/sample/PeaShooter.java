@@ -14,11 +14,14 @@ package sample;
 
 
 public class PeaShooter extends Shooter {
+    public PeaShooter()
+    {
 
+    }
     protected static float PlantCost=100;
     private static final float RegenerationTime=10;
 
-    Group root2;
+    transient Group root2;
     Level L1;
 
     public static float getRegenerationTime() {

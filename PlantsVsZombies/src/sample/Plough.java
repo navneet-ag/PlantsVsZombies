@@ -1,6 +1,8 @@
 package sample;
 
-public class Plough {
+import java.io.Serializable;
+
+public class Plough implements Serializable {
     private float x;
     private float y;
 

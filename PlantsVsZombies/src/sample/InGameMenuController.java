@@ -67,13 +67,15 @@ public class InGameMenuController extends Controller {
         shadow.setColor(Color.rgb(14, 176, 52));
         QuitButton.setEffect(shadow);
         System.out.println("PlayPressed");
+
     }
 
-    public void Exitreleased(MouseEvent mouseEvent)
-    {
+    public void Exitreleased(MouseEvent mouseEvent) throws IOException {
         ImageView QuitButton=(ImageView)mouseEvent.getSource();
         QuitButton.setEffect(null);
-        System.out.println("PlayReleased");
+
+        Main.serialize();
+        System.out.println("exitreleased");
         System.exit(0);
 
     }
@@ -118,7 +120,6 @@ public class InGameMenuController extends Controller {
         transtionpea.setCycleCount(10);
         transtionpea.play();
 
-
         final ImageView SelectedPlant = new ImageView();
         Image PeaShooter = new Image("sample/pea_shooter.gif");
         SelectedPlant.setImage(PeaShooter);
@@ -153,7 +154,6 @@ public class InGameMenuController extends Controller {
         ImageView OkButton=(ImageView)mouseEvent.getSource();
         OkButton.setEffect(null);
         Parent tableparent = FXMLLoader.load(getClass().getResource("GamePlay.fxml"));
-
         Group root2=new Group(tableparent,SelectedZombie,SelectedPlant,ShootPea,Sun);
         Scene tablescene =new Scene(root2);
         Stage window=(Stage)((Node)mouseEvent.getSource()).getScene().getWindow();
@@ -162,8 +162,6 @@ public class InGameMenuController extends Controller {
         window.show();
         System.out.println("PlayReleased");
     }
-
-
 
 
 }

@@ -10,7 +10,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
-public class LawnMover {
+import java.io.Serializable;
+
+public class LawnMover implements Serializable {
 
 
     private class CheckZombieHandler implements EventHandler<ActionEvent>
@@ -23,7 +25,7 @@ public class LawnMover {
         }
     }
 
-    Group root2;
+    transient Group root2;
     Level L1;
 
 
@@ -31,7 +33,11 @@ public class LawnMover {
     private float y;
     private float Speed;
     private Boolean UseStatus;
-    final ImageView LawnMoverView = new ImageView();
+    final transient ImageView LawnMoverView = new ImageView();
+    public LawnMover()
+    {
+
+    }
     public LawnMover(int x, int y,Group root2, Level L1)
     {
         Speed=5;

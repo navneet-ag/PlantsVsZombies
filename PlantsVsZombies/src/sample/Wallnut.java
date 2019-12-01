@@ -12,7 +12,7 @@ import javafx.util.Duration;
 
 public class Wallnut extends Barrier {
     protected static float PlantCost=50;
-    private Group root2;
+    private transient Group root2;
     private Level L1;
     private static final float RegenerationTime=10;
 

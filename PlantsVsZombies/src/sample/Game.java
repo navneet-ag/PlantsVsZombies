@@ -1,16 +1,17 @@
 package sample;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Game {
+public class Game implements Serializable {
 
     private Level CurrentLevel;
     private ArrayList<String> SelectedPlants = new ArrayList<String>();
     private ArrayList<Zombie> ZombiesInGrid = new ArrayList<Zombie>();
     private ArrayList<Sun> SunInGrid = new ArrayList<Sun>();
-    public Game()
+    public Game(int level)
     {
-        CurrentLevel=new Level();
+        CurrentLevel=new Level(level);
     }
     public Level getCurrentLevel() {
         return CurrentLevel;

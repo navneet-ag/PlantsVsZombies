@@ -7,8 +7,9 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
+import java.io.Serializable;
 
-public class Controller {
+public class Controller  {
     public void MouseEntered( MouseEvent mouseEvent)
     {
         String musicFile = "MouseEnter.wav";
