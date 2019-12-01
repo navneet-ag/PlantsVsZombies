@@ -31,7 +31,7 @@ public class Main extends Application {
 
         if(ListofPlayers==null)
             ListofPlayers=new ArrayList<>();
-        System.out.println(ListofPlayers.get(1).getName());
+//        System.out.println(ListofPlayers.get(1).getName());
         String musicFile = "background.wav";
         Media sound = new Media(new File("background.wav").toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(sound);

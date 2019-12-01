@@ -39,7 +39,7 @@ public class NormalZombie extends Zombie{
         setX(x);
         setY(y);
     }
-    private void AddNormalZombie(int x, int y, Group root2, Level L1)
+    public void AddNormalZombie(int x, int y, Group root2, Level L1)
     {
 
         final  ImageView SelectedZombie = new ImageView();

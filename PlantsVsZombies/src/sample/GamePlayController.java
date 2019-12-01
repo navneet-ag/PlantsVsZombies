@@ -242,6 +242,7 @@ public class GamePlayController extends Controller {
     }
     public void IsTileFree(DragEvent dragEvent) throws IOException
     {
+        System.out.println("Dragged here");
         ImageView current=(ImageView)dragEvent.getSource();
         if(dragEvent.getDragboard().hasImage() && current.getImage()==null){
             dragEvent.acceptTransferModes(TransferMode.ANY);

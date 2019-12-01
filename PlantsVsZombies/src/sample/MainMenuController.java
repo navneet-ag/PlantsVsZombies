@@ -77,10 +77,7 @@ public class MainMenuController extends Controller{
     {
         @Override
         public void handle(ActionEvent actionEvent) {
-
-
             SelectedZombie.setLayoutX(SelectedZombie.getLayoutX()-1);
-
         }
     }
 
@@ -809,16 +806,78 @@ public class MainMenuController extends Controller{
                         root2.getChildren().add(WallNutCard);
                     root2.getChildren().add(SunAvailableLabel);
                     root2.getChildren().add(NameLabel);
-//                    for(int plant=0;plant<Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().getPlantsList().size();plant++)
-//
-//                    {
-//                        Plant p=Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().getPlantsList().get(plant);
-//                        if(p instanceof PeaShooter)
-//                            p.get
-//
-//                    }
+                    for(int plant=0;plant<Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().getPlantsList().size();plant++)
 
-                    Scene tablescene =new Scene(root2);
+                    {
+                        Plant p=Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().getPlantsList().get(plant);
+                        if(p instanceof PeaShooter) {
+                            ImageView p1 = new ImageView("sample/pea_shooter.gif");
+                            p1.setFitWidth(46.6);
+                            p1.setFitHeight(70);
+                            p1.setLayoutX(p.getX());
+                            p1.setLayoutY(p.getY());
+                            root2.getChildren().add(p1);
+                            ((PeaShooter) p).Shoot(root2,Main.getCurrentPlayer().getPlayerGame().getCurrentLevel());
+                        }
+                        if(p instanceof Wallnut) {
+                            ImageView p1 = new ImageView("sample/walnut_full_life.gif");
+                            p1.setFitWidth(46.6);
+                            p1.setFitHeight(70);
+                            p1.setLayoutX(p.getX());
+                            p1.setLayoutY(p.getY());
+                            root2.getChildren().add(p1);
+                        }
+                        if(p instanceof Potatomine) {
+                            ImageView p1;
+                            if(!(((Potatomine) p).canbeusedstatus))
+                             p1 = new ImageView("sample/UnarmedPotatoMine.png");
+                            else
+                            p1 = new ImageView("sample/Potato_Mine.png");
+                            p1.setFitWidth(46.6);
+                            p1.setFitHeight(70);
+
+                            p1.setLayoutX(p.getX());
+                            p1.setLayoutY(p.getY());
+                            root2.getChildren().add(p1);
+                        }
+                        if(p instanceof Sunflower) {
+                            ImageView p1 = new ImageView("sample/sun_flower.gif");
+                            p1.setFitWidth(46.6);
+                            p1.setFitHeight(70);
+
+                            p1.setLayoutX(p.getX());
+                            p1.setLayoutY(p.getY());
+                            root2.getChildren().add(p1);
+                        }
+
+                    }
+                    for(int plant=0;plant<Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().getZombiesList().size();plant++)
+                    {
+                        Zombie zombie=(Zombie) Main.getCurrentPlayer().getPlayerGame().getCurrentLevel().getZombiesList().get(plant);
+                        if(zombie instanceof NormalZombie){
+                            ImageView p1 = new ImageView("sample/zombie_normal.gif");
+//                            p1.setFitHeight((70));
+//                            p1.setFitWidth(46.6);
+//                            p1.setLayoutX(zombie.getX());
+//                            p1.setLayoutY(zombie.getY());
+//                            root2.getChildren().add(p1);
+                            ((NormalZombie)zombie).AddNormalZombie((int)zombie.getX(), (int)zombie.getY(),  root2, Main.getCurrentPlayer().getPlayerGame().getCurrentLevel());
+                        }
+                        else if(zombie instanceof AthleteZombie)
+                        {
+                            ImageView p1 = new ImageView("sample/zombie_football.gif");
+                            p1.setFitHeight(70);
+                            p1.setFitWidth(46.6);
+                            p1.setLayoutX(zombie.getX());
+                            p1.setLayoutY(zombie.getY());
+                            root2.getChildren().add(p1);
+
+                        }
+
+                    }
+
+
+                        Scene tablescene =new Scene(root2);
                     Stage window=(Stage)((Node)f.getSource()).getScene().getWindow();
 //        Stage window=(Stage) ((Node)event.getSource()).getScene().getWindow();
                     window.setScene(tablescene);

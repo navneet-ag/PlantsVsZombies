@@ -6,13 +6,14 @@ import javafx.scene.image.ImageView;
 import java.io.Serializable;
 
 public class Avatar implements Serializable {
+
     protected float x;
     protected float y;
     protected float Health;
     protected Boolean LifeStatus;
     protected transient ImageView Myavatar;
     protected transient Image Myimage;
-
+    public String tilenumber;
     public Image getMyimage() {
         return Myimage;
     }
